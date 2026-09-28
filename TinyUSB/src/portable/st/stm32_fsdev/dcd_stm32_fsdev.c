@@ -218,9 +218,10 @@ void dcd_remote_wakeup(uint8_t rhport) {
 }
 
 static void handle_bus_reset(uint8_t rhport) {
+  uint32_t i;
+
   FSDEV_REG->DADDR = 0u; // disable USB Function
 
-  { uint32_t i;
   for (i = 0; i < FSDEV_EP_COUNT; i++) {
     // Clear EP allocation status
     ep_alloc_status[i].ep_num       = 0xFF;
@@ -495,8 +496,8 @@ static uint32_t dcd_pma_alloc(uint16_t len, bool dbuf) {
 static uint8_t dcd_ep_alloc(uint8_t ep_addr, uint8_t ep_type) {
   const uint8_t epnum = tu_edpt_number(ep_addr);
   const uint8_t dir   = tu_edpt_dir(ep_addr);
+  uint8_t i;
 
-  { uint8_t i;
   for (i = 0; i < FSDEV_EP_COUNT; i++) {
     // Check if already allocated
     if (ep_alloc_status[i].allocated[dir] && ep_alloc_status[i].ep_type == ep_type &&
@@ -609,9 +610,10 @@ bool dcd_edpt_open(uint8_t rhport, const tusb_desc_endpoint_t *desc_ep) {
 }
 
 void dcd_edpt_close_all(uint8_t rhport) {
+  uint32_t i;
+
   dcd_int_disable(rhport);
 
-  { uint32_t i;
   for (i = 1; i < FSDEV_EP_COUNT; i++) {
     // Reset endpoint
     ep_write(i, 0, false);
