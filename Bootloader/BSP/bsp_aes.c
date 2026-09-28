@@ -111,8 +111,11 @@ void BSP_AES_Init(BSP_AES_Context_t *ctx, const uint8_t *key)
 
 static void InvSubBytes(uint8_t state[4][4])
 {
-    for (uint8_t i = 0U; i < 4U; i++)
-        for (uint8_t j = 0U; j < 4U; j++)
+    uint8_t i;
+    uint8_t j;
+
+    for (i = 0U; i < 4U; i++)
+        for (j = 0U; j < 4U; j++)
             state[i][j] = inv_sbox[state[i][j]];
 }
 
@@ -142,7 +145,9 @@ static void InvShiftRows(uint8_t state[4][4])
 
 static void InvMixColumns(uint8_t state[4][4])
 {
-    for (uint8_t i = 0U; i < 4U; i++)
+    uint8_t i;
+
+    for (i = 0U; i < 4U; i++)
     {
         uint8_t a = state[0][i];
         uint8_t b = state[1][i];
@@ -158,22 +163,28 @@ static void InvMixColumns(uint8_t state[4][4])
 
 static void AddRoundKey(uint8_t round, uint8_t state[4][4], const uint8_t *round_key)
 {
-    for (uint8_t i = 0U; i < 4U; i++)
-        for (uint8_t j = 0U; j < 4U; j++)
+    uint8_t i;
+    uint8_t j;
+
+    for (i = 0U; i < 4U; i++)
+        for (j = 0U; j < 4U; j++)
             state[i][j] ^= round_key[(round * 16U) + (j * 4U) + i];
 }
 
 void BSP_AES_DecryptBlock(const BSP_AES_Context_t *ctx, const uint8_t *in, uint8_t *out)
 {
     uint8_t state[4][4];
+    uint8_t i;
+    uint8_t j;
+    uint8_t round;
 
-    for (uint8_t i = 0U; i < 4U; i++)
-        for (uint8_t j = 0U; j < 4U; j++)
+    for (i = 0U; i < 4U; i++)
+        for (j = 0U; j < 4U; j++)
             state[i][j] = in[i + (4U * j)];
 
     AddRoundKey(10U, state, ctx->round_key);
 
-    for (uint8_t round = 9U; round > 0U; round--)
+    for (round = 9U; round > 0U; round--)
     {
         InvShiftRows(state);
         InvSubBytes(state);
@@ -185,7 +196,7 @@ void BSP_AES_DecryptBlock(const BSP_AES_Context_t *ctx, const uint8_t *in, uint8
     InvSubBytes(state);
     AddRoundKey(0U, state, ctx->round_key);
 
-    for (uint8_t i = 0U; i < 4U; i++)
-        for (uint8_t j = 0U; j < 4U; j++)
+    for (i = 0U; i < 4U; i++)
+        for (j = 0U; j < 4U; j++)
             out[i + (4U * j)] = state[i][j];
 }
