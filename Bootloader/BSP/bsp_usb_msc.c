@@ -6,6 +6,7 @@
 #include "boot_crc32.h"
 #include "bootloader_defs.h"
 #include "bootloader_config.h"
+#include "stm32f3xx.h"
 #include "tusb.h"
 #include <string.h>
 
@@ -115,13 +116,19 @@ int32_t tud_msc_write10_cb(uint8_t lun,uint32_t lba,uint32_t offset,uint8_t *buf
     }
     return (int32_t)bufsize;
 }
-bool tud_msc_scsi_cb(uint8_t lun,uint8_t const scsi_cmd[16],void *buffer,uint16_t bufsize)
+
+int32_t tud_msc_scsi_cb(uint8_t lun,uint8_t const scsi_cmd[16],void *buffer,uint16_t bufsize)
 {
-    (void)buffer;(void)bufsize;
-    if (scsi_cmd[0]==SCSI_CMD_PREVENT_ALLOW_MEDIUM_REMOVAL) return true;
+    (void)buffer;
+    (void)bufsize;
+
+    if (scsi_cmd[0]==SCSI_CMD_PREVENT_ALLOW_MEDIUM_REMOVAL)
+        return 0;
+
     tud_msc_set_sense(lun,SCSI_SENSE_ILLEGAL_REQUEST,0x20,0);
-    return false;
+    return TUD_MSC_RET_ERROR;
 }
+
 bool tud_msc_test_unit_ready_cb(uint8_t lun)
 {
     if (msc_state==BOOT_MSC_STATE_REJECTED) { tud_msc_set_sense(lun,SCSI_SENSE_NOT_READY,0x3A,0); return false; }
