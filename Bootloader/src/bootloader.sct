@@ -1,18 +1,16 @@
-; ==========================================================
-; Scatter File for Bootloader (STM32F303CBT6)
-; Занимает Блок 0: 16 КБ (0x0800 0000 - 0x0800 3FFF)
-; ==========================================================
+; STM32F303CBT6 - 128 KiB Flash
+; 16 KiB bootloader + 54 KiB MAIN + 54 KiB BACKUP + 2 x 2 KiB settings
 
-LR_IROM1 0x08000000 0x00004000  ; 16 КБ Flash для загрузчика
+LR_IROM1 0x08000000 0x00004000
 {
     ER_IROM1 0x08000000 0x00004000
     {
-        *.o (RESET, +First)       ; Таблица векторов прерываний загрузчика
-        *(InRoot$$Sections)       ; Секции инициализации (__main, __scatterload)
-        .ANY (+RO)                ; Код и константы загрузчика
+        *.o (RESET, +First)
+        *(InRoot$$Sections)
+        .ANY (+RO)
     }
-    
-    RW_IRAM1 0x20000000 0x00008000  ; 32 КБ RAM (Загрузчик использует всю доступную RAM)
+
+    RW_IRAM1 0x20000000 0x00008000
     {
         .ANY (+RW +ZI)
     }
