@@ -678,7 +678,8 @@ void tud_task_ext(uint32_t timeout_ms, bool in_isr) {
   }
 
   // Loop until there are no more events in the queue or CFG_TUD_TASK_EVENTS_PER_RUN is reached
-  for (unsigned epr = 0;; epr++) {
+  unsigned epr;
+  for (epr = 0;; epr++) {
 #if CFG_TUD_TASK_EVENTS_PER_RUN > 0
     if (epr >= CFG_TUD_TASK_EVENTS_PER_RUN) {
       TU_LOG_USBD("USBD event limit (" TU_XSTRING(CFG_TUD_TASK_EVENTS_PER_RUN) ") reached\r\n");
@@ -1533,7 +1534,8 @@ void usbd_spin_unlock(bool in_isr) {
 // Parse consecutive endpoint descriptors (IN & OUT)
 bool usbd_open_edpt_pair(uint8_t rhport, const uint8_t *p_desc, uint8_t ep_count, uint8_t xfer_type, uint8_t *ep_out,
                          uint8_t *ep_in) {
-  for (int i = 0; i < ep_count; i++) {
+  int i;
+  for (i = 0; i < ep_count; i++) {
     const tusb_desc_endpoint_t *desc_ep = (const tusb_desc_endpoint_t *)p_desc;
 
     TU_ASSERT(TUSB_DESC_ENDPOINT == desc_ep->bDescriptorType && xfer_type == desc_ep->bmAttributes.xfer);
