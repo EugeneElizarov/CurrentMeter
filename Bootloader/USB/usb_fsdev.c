@@ -24,12 +24,12 @@ static volatile uint16_t *epreg(uint8_t ep){return (volatile uint16_t *)((uintpt
 static volatile uint16_t *btw(uint8_t ep,uint8_t n){return (volatile uint16_t *)(USB_PMA_BASE+((ep*8U+n)*USB_PMA_ACCESS));}
 static void pma_write(uint16_t a,const uint8_t *p,uint16_t n){
  volatile uint16_t *d=PMA_WORD(a);uint16_t i=0;
- while(i+1<n){*d=(uint16_t)p[i]|((uint16_t)p[i+1]<<8);d+=2;i+=2;}
+ while(i+1<n){*d=(uint16_t)p[i]|((uint16_t)p[i+1]<<8);d++;i+=2;}
  if(i<n)*d=p[i];
 }
 static void pma_read(uint16_t a,uint8_t *p,uint16_t n){
  volatile uint16_t *s=PMA_WORD(a);uint16_t i=0,v;
- while(i+1<n){v=*s;p[i]=(uint8_t)v;p[i+1]=(uint8_t)(v>>8);s+=2;i+=2;}
+ while(i+1<n){v=*s;p[i]=(uint8_t)v;p[i+1]=(uint8_t)(v>>8);s++;i+=2;}
  if(i<n)*p=(uint8_t)*s;
 }
 static uint16_t rx_count_code(uint16_t n){
@@ -155,7 +155,7 @@ static void ep2_rx(void){
 static void ep1_tx(void){clear_tx_ctr(1);USB_MSC_InComplete();}
 void USB_Device_Init(void){
  USB->CNTR=USB_CNTR_FRES;USB->CNTR=0;USB->ISTR=0;bus_reset();
- USB->CNTR=(uint16_t)(USB_CNTR_CTRM|USB_CNTR_RESETM|USB_CNTR_SUSPM|USB_CNTR_WKUPM|USB_CNTR_PMAOVRM|USB_CNTR_ERRM);USB->BCDR|=USB_BCDR_DPPU;
+ USB->CNTR=(uint16_t)(USB_CNTR_CTRM|USB_CNTR_RESETM|USB_CNTR_SUSPM|USB_CNTR_WKUPM|USB_CNTR_PMAOVRM|USB_CNTR_ERRM);
  NVIC_EnableIRQ(USB_LP_CAN_RX0_IRQn);
 }
 void USB_Device_IRQHandler(void){
