@@ -510,7 +510,8 @@ void tu_print_mem(void const* buf, uint32_t count, uint8_t indent) {
   format[2] += (uint8_t) (2 * size); // 1 byte = 2 hex digits
   const uint8_t item_per_line = 16 / size;
 
-  for (unsigned int i = 0; i < count; i++) {
+  unsigned int i;
+  for (i = 0; i < count; i++) {
     unsigned int value = 0;
 
     if (i % item_per_line == 0) {
@@ -538,7 +539,8 @@ void tu_print_mem(void const* buf, uint32_t count, uint8_t indent) {
   if (remain > 0) {
     for (uint32_t i = 0; i < 16 - remain; i++) {
       tu_printf(" ");
-      for (int j = 0; j < 2 * size; j++) {
+      int j;
+  for (j = 0; j < 2 * size; j++) {
         tu_printf(" ");
       }
     }
