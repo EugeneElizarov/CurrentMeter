@@ -39,6 +39,7 @@ typedef struct __attribute__((packed))
 
 _Static_assert(sizeof(FAT12_BootSector_t) == FAT12_SECTOR_SIZE, "FAT12 boot sector size");
 _Static_assert(sizeof(FAT12_DirEntry_t) == 32U, "FAT12 directory entry size");
+_Static_assert(FAT12_UPDATE_END_LBA <= FAT12_TOTAL_SECTORS, "FAT12 update file does not fit");
 
 static uint8_t boot_sector[FAT12_SECTOR_SIZE] __attribute__((aligned(4)));
 static uint8_t fat[FAT12_SECTOR_SIZE * 2U] __attribute__((aligned(4)));
@@ -70,9 +71,9 @@ void BSP_FAT12_Init(void)
 
     FAT12_BootSector_t *b = (FAT12_BootSector_t *)boot_sector;
 
-    b->jump_boot[0] = 0xEB;
-    b->jump_boot[1] = 0x3C;
-    b->jump_boot[2] = 0x90;
+    b->jump_boot[0] = 0xEBU;
+    b->jump_boot[1] = 0x3CU;
+    b->jump_boot[2] = 0x90U;
     memcpy(b->oem_name, "MSDOS5.0", 8U);
     b->bytes_per_sector = FAT12_SECTOR_SIZE;
     b->sectors_per_cluster = 1U;
@@ -97,13 +98,12 @@ void BSP_FAT12_Init(void)
     fat1[1] = 0xFFU;
     fat1[2] = 0xFFU;
 
-    const uint16_t sectors =
-        (uint16_t)((FAT12_UPDATE_SIZE + FAT12_SECTOR_SIZE - 1U) / FAT12_SECTOR_SIZE);
-
-    for (uint16_t c = 0U; c < sectors; ++c)
+    for (uint16_t c = 0U; c < FAT12_UPDATE_SECTORS; ++c)
     {
         const uint16_t cluster = (uint16_t)(2U + c);
-        const uint16_t next = (c + 1U < sectors) ? (uint16_t)(cluster + 1U) : 0x0FFFU;
+        const uint16_t next = (c + 1U < FAT12_UPDATE_SECTORS)
+                                  ? (uint16_t)(cluster + 1U)
+                                  : 0x0FFFU;
         fat12_set(fat1, cluster, next);
     }
 
@@ -124,11 +124,18 @@ const uint8_t *BSP_FAT12_GetSectorPtr(uint32_t lba)
     if (lba == 0U)
         return boot_sector;
 
-    if (lba >= 1U && lba <= 4U)
+    if (lba <= 4U)
         return &fat[(lba - 1U) * FAT12_SECTOR_SIZE];
 
     if (lba == FAT12_ROOT_LBA)
         return root_dir;
+
+    if (lba >= FAT12_DATA_START_LBA && lba < FAT12_UPDATE_END_LBA)
+    {
+        return (const uint8_t *)(uintptr_t)(BOOT_BACKUP_APP_ADDR +
+                                            (lba - FAT12_DATA_START_LBA) *
+                                            FAT12_SECTOR_SIZE);
+    }
 
     return empty_sector;
 }
