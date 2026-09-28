@@ -1,6 +1,7 @@
 // File: bsp_rcc.c
 #include "bsp_rcc.h"
 #include "stm32f3xx.h"
+#include "system_stm32f3xx.h"
 
 #define RCC_CFGR_USBPRE_BIT       (1UL << 22)
 #define RCC_APB1ENR_USBEN_BIT     (1UL << 23)
@@ -52,7 +53,6 @@ void BSP_RCC_Init(void)
     GPIOA->AFR[1] |= (GPIOA_USB_AF << ((11U - 8U) * 4U)) |
                      (GPIOA_USB_AF << ((12U - 8U) * 4U));
 
-    /* Enable the USB peripheral clock. */
     RCC->APB1ENR |= RCC_APB1ENR_USBEN_BIT;
 
     SystemCoreClock = BSP_RCC_SYSCLK_FREQ_HZ;
