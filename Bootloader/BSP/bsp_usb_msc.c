@@ -47,7 +47,8 @@ int32_t tud_msc_read10_cb(uint8_t lun, uint32_t lba, uint32_t offset,
 {
     (void)lun;
 
-    if (offset > FAT12_SECTOR_SIZE || bufsize > FAT12_SECTOR_SIZE - offset)
+    if (offset > FAT12_SECTOR_SIZE ||
+        bufsize > FAT12_SECTOR_SIZE - offset)
         return TUD_MSC_RET_ERROR;
 
     const uint8_t *sector = BSP_FAT12_GetSectorPtr(lba);
@@ -70,7 +71,7 @@ int32_t tud_msc_write10_cb(uint8_t lun, uint32_t lba, uint32_t offset,
     if (offset != 0U || bufsize == 0U)
         return TUD_MSC_RET_ERROR;
 
-    const uint32_t file_offset =
+    uint32_t file_offset =
         (lba - FAT12_DATA_START_LBA) * FAT12_SECTOR_SIZE + offset;
 
     if (msc_state == BOOT_MSC_STATE_WAIT_HEADER)
@@ -125,6 +126,7 @@ int32_t tud_msc_write10_cb(uint8_t lun, uint32_t lba, uint32_t offset,
 
         buffer += sizeof(BOOT_FW_Header_t);
         bufsize -= sizeof(BOOT_FW_Header_t);
+        file_offset = sizeof(BOOT_FW_Header_t);
     }
 
     if (msc_state != BOOT_MSC_STATE_RECEIVING)
