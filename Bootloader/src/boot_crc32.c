@@ -9,8 +9,9 @@ uint32_t BOOT_CalcCRC32(uint32_t addr, uint32_t length)
 
     uint32_t words = length / 4U;
     const uint32_t *ptr = (const uint32_t *)addr;
+    uint32_t i;
 
-    for (uint32_t i = 0; i < words; i++)
+    for (i = 0; i < words; i++)
     {
         CRC->DR = ptr[i];
     }
