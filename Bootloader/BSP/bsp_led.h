@@ -13,7 +13,8 @@ typedef enum
     BSP_LED_OFF = 0,
     BSP_LED_FLASH_1S,
     BSP_LED_FLASH_500MS,
-    BSP_LED_FLASH_250MS, /* Исправлено с 250VS */
+    BSP_LED_FLASH_250MS,
+    BSP_LED_FLASH_125MS,
     BSP_LED_ON
 } BSP_LED_Mode_t;
 
@@ -28,7 +29,7 @@ void BSP_LED_Init(void);
 
 /**
  * @brief Управление режимом работы светодиода.
- * @param mode Желаемый режим (OFF, FLASH_1S, FLASH_500MS, FLASH_250MS, ON).
+ * @param mode Желаемый режим (OFF, FLASH_1S, FLASH_500MS, FLASH_250MS, FLASH_125MS, ON).
  */
 void BSP_LED_Control(BSP_LED_Mode_t mode);
 
