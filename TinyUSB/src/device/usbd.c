@@ -574,6 +574,7 @@ bool tud_rhport_init(uint8_t rhport, const tusb_rhport_init_t* rh_init) {
     TU_LOG_USBD("%s init\r\n", driver->name);
     driver->init();
   }
+  }
 
   _usbd_rhport = rhport;
 
@@ -608,6 +609,7 @@ bool tud_deinit(uint8_t rhport) {
       driver->deinit();
     }
   }
+  }
 
   tu_varclr(&_usbd_dev); // Clear device data
 
@@ -639,6 +641,7 @@ static void configuration_reset(uint8_t rhport) {
     usbd_class_driver_t const* driver = get_driver(i);
     TU_ASSERT(driver,);
     driver->reset(rhport);
+  }
   }
 
   tu_varclr(&_usbd_dev);
