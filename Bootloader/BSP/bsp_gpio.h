@@ -3,7 +3,7 @@
 #define BSP_GPIO_H
 
 #include <stdint.h>
-#include "stm32f303xb.h"
+#include "stm32f3xx.h"
 
 void BSP_GPIO_Init(void);
 void BSP_GPIO_ToggleLed(void);
