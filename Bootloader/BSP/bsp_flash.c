@@ -18,6 +18,7 @@ static bool flash_wait(void)
 static bool flash_range_valid(uint32_t addr, uint32_t size)
 {
     return addr >= BOOT_FLASH_BASE &&
+           addr <= BOOT_FLASH_END &&
            size <= BOOT_FLASH_END - addr;
 }
 
