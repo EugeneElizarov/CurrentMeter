@@ -68,8 +68,9 @@ bool BSP_SETTINGS_Store(const BOOT_Settings_t *settings)
     }
 
     const uint16_t *p = (const uint16_t *)&tmp;
+    uint32_t i;
 
-    for (uint32_t i = 0U; i < sizeof(tmp) / 2U; ++i)
+    for (i = 0U; i < sizeof(tmp) / 2U; ++i)
     {
         if (!BSP_FLASH_WriteHalfWord(target_addr + i * 2U, p[i]))
         {
