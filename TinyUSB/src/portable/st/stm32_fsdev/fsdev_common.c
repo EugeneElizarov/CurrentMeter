@@ -21,14 +21,14 @@ void fsdev_core_reset(void) {
   // Perform USB peripheral reset
   FSDEV_REG->CNTR = U_CNTR_FRES | U_CNTR_PDWN;
   for (volatile uint32_t i = 0; i < 200; i++) { // should be a few us
-    asm("NOP");
+    __NOP();
   }
 
   FSDEV_REG->CNTR &= ~U_CNTR_PDWN;
 
   // Wait startup time, for F042 and F070, this is <= 1 us.
   for (volatile uint32_t i = 0; i < 200; i++) { // should be a few us
-    asm("NOP");
+    __NOP();
   }
 
   // Clear pending interrupts
@@ -51,7 +51,7 @@ void fsdev_deinit(void) {
   // Put USB peripheral in power down mode
   FSDEV_REG->CNTR = U_CNTR_FRES | U_CNTR_PDWN;
   for (volatile uint32_t i = 0; i < 200; i++) { // should be a few us
-    asm("NOP");
+    __NOP();
   }
 }
 
