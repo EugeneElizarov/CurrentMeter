@@ -10,6 +10,10 @@
 #define BOOT_SERIAL_STR        "000000000001"
 #define BOOT_DEVICE_BCD        0x0100U
 
+#define BOOT_LED_PORT           GPIOB
+#define BOOT_LED_PIN            14U
+#define BOOT_LED_RCC_EN         RCC_AHBENR_GPIOBEN
+
 /*
  * Protocol constants.
  * These are intentionally test values and MUST be replaced before production use.
