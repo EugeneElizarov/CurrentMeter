@@ -12,8 +12,11 @@ void BSP_RCC_Init(void)
     RCC->CR &= ~RCC_CR_PLLON;
     while (RCC->CR & RCC_CR_PLLRDY);
 
-    RCC->CFGR &= ~(RCC_CFGR_PLLSRC | RCC_CFGR_PLLMUL | RCC_CFGR_USBPRES);
-    RCC->CFGR |= RCC_CFGR_PLLSRC_HSE | RCC_CFGR_PLLMUL6 | RCC_CFGR_USBPRES;
+    /* HSE = 12 MHz -> PLL = 72 MHz.
+       On STM32F303 the USB FS clock is derived from the PLL clock;
+       there is no RCC_CFGR_USBPRES field in this device header. */
+    RCC->CFGR &= ~(RCC_CFGR_PLLSRC | RCC_CFGR_PLLMUL);
+    RCC->CFGR |= RCC_CFGR_PLLSRC_HSE_PREDIV | RCC_CFGR_PLLMUL6;
 
     RCC->CR |= RCC_CR_PLLON;
     while (!(RCC->CR & RCC_CR_PLLRDY));
