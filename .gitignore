@@ -1,4 +1,10 @@
-*.uv*
 *.o
 *.d
 *.htm*
+*.dbgconf
+*.axf
+*.lnp
+*.map
+*.dep
+*.uvguix*
+*.uvoptx
