@@ -32,8 +32,15 @@ typedef struct __attribute__((packed))
 {
     uint8_t  name[11];
     uint8_t  attr;
-    uint8_t  reserved[10];
-    uint16_t first_cluster;
+    uint8_t  nt_reserved;
+    uint8_t  create_time_tenth;
+    uint16_t create_time;
+    uint16_t create_date;
+    uint16_t access_date;
+    uint16_t cluster_high;
+    uint16_t write_time;
+    uint16_t write_date;
+    uint16_t cluster_low;
     uint32_t file_size;
 } FAT12_DirEntry_t;
 
@@ -91,6 +98,7 @@ void BSP_FAT12_Init(void)
     memcpy(b->fs_type, "FAT12   ", 8U);
     b->boot_sector_sign = 0xAA55U;
 
+    uint16_t c;
     uint8_t *fat1 = &fat[0];
     uint8_t *fat2 = &fat[FAT12_SECTOR_SIZE];
 
@@ -98,7 +106,7 @@ void BSP_FAT12_Init(void)
     fat1[1] = 0xFFU;
     fat1[2] = 0xFFU;
 
-    for (uint16_t c = 0U; c < FAT12_UPDATE_SECTORS; ++c)
+    for (c = 0U; c < FAT12_UPDATE_SECTORS; ++c)
     {
         const uint16_t cluster = (uint16_t)(2U + c);
         const uint16_t next = (c + 1U < FAT12_UPDATE_SECTORS)
@@ -112,7 +120,8 @@ void BSP_FAT12_Init(void)
     FAT12_DirEntry_t *root = (FAT12_DirEntry_t *)root_dir;
     memcpy(root->name, "UPDATE  BIN", 11U);
     root->attr = 0x20U;
-    root->first_cluster = 2U;
+    root->cluster_low = 2U;
+    root->cluster_high = 0U;
     root->file_size = FAT12_UPDATE_SIZE;
 }
 
