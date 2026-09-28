@@ -567,7 +567,8 @@ bool tud_rhport_init(uint8_t rhport, const tusb_rhport_init_t* rh_init) {
   TU_ASSERT(_app_driver_count + _builtin_driver_count <= UINT8_MAX);
 
   // Init class drivers
-  for (uint8_t i = 0; i < TOTAL_DRIVER_COUNT; i++) {
+  { uint8_t i;
+  for (i = 0; i < TOTAL_DRIVER_COUNT; i++) {
     usbd_class_driver_t const* driver = get_driver(i);
     TU_ASSERT(driver && driver->init);
     TU_LOG_USBD("%s init\r\n", driver->name);
@@ -598,7 +599,9 @@ bool tud_deinit(uint8_t rhport) {
   TU_ASSERT(dcd_deinit(rhport));
 
   // Deinit class drivers
-  for (uint8_t i = 0; i < TOTAL_DRIVER_COUNT; i++) {
+  {
+    uint8_t i;
+    for (i = 0; i < TOTAL_DRIVER_COUNT; i++) {
     usbd_class_driver_t const* driver = get_driver(i);
     if(driver && driver->deinit) {
       TU_LOG_USBD("%s deinit\r\n", driver->name);
@@ -630,7 +633,9 @@ bool tud_deinit(uint8_t rhport) {
 }
 
 static void configuration_reset(uint8_t rhport) {
-  for (uint8_t i = 0; i < TOTAL_DRIVER_COUNT; i++) {
+  {
+    uint8_t i;
+    for (i = 0; i < TOTAL_DRIVER_COUNT; i++) {
     usbd_class_driver_t const* driver = get_driver(i);
     TU_ASSERT(driver,);
     driver->reset(rhport);
@@ -1439,7 +1444,9 @@ TU_ATTR_FAST_FUNC void dcd_event_handler(dcd_event_t const* event, bool in_isr) 
 
     case DCD_EVENT_SOF:
       // SOF driver handler in ISR context
-      for (uint8_t i = 0; i < TOTAL_DRIVER_COUNT; i++) {
+      {
+    uint8_t i;
+    for (i = 0; i < TOTAL_DRIVER_COUNT; i++) {
         usbd_class_driver_t const* driver = get_driver(i);
         if (driver && driver->sof) {
           driver->sof(event->rhport, event->sof.frame_count);
