@@ -42,4 +42,5 @@
 #define USB_CNTR_RESETM 0x0400U
 #define USB_CNTR_FRES 0x0001U
 #define USB_DADDR_EF 0x0080U
+#define USB_BCDR_DPPU 0x8000U
 #endif
