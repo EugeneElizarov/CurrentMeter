@@ -105,7 +105,9 @@ static bool decrypt_block(const uint8_t *cipher, uint32_t dst)
 
   for(i = 0U; i < 16U; i += 2U)
   {
-    uint16_t halfword = (uint16_t)plain[i] | ((uint16_t)plain[i + 1U] << 8);
+    uint16_t halfword = plain[i + 1U];
+    halfword <<= 8;
+    halfword |= plain[i];
 
     if (!BSP_FLASH_WriteHalfWord(dst + i, halfword)) 
       return false;
