@@ -276,11 +276,14 @@ static void hwff_push_n(const tu_fifo_t *f, const void *app_buf, uint16_t n, uin
       tu_hwfifo_read(hwfifo, buf_temp, lin_odd + wrap_odd, access_mode);
       HWFIFO_ADDR_NEXT(hwfifo, const);
 
-      for (uint8_t i = 0; i < lin_odd; ++i) {
-        ff_buf[i] = buf_temp[i];
-      }
-      for (uint8_t i = 0; i < wrap_odd; ++i) {
-        f->buffer[i] = buf_temp[lin_odd + i];
+      {
+        uint8_t i;
+        for (i = 0; i < lin_odd; ++i) {
+          ff_buf[i] = buf_temp[i];
+        }
+        for (i = 0; i < wrap_odd; ++i) {
+          f->buffer[i] = buf_temp[lin_odd + i];
+        }
       }
 
       wrap_bytes -= wrap_odd;
@@ -330,11 +333,14 @@ static void hwff_pull_n(const tu_fifo_t *f, void *app_buf, uint16_t n, uint16_t 
       const uint8_t wrap_odd = (uint8_t)tu_min16(wrap_bytes, data_stride - lin_odd);
 
       uint8_t buf_temp[4];
-      for (uint8_t i = 0; i < lin_odd; ++i) {
-        buf_temp[i] = ff_buf[i];
-      }
-      for (uint8_t i = 0; i < wrap_odd; ++i) {
-        buf_temp[lin_odd + i] = f->buffer[i];
+      {
+        uint8_t i;
+        for (i = 0; i < lin_odd; ++i) {
+          buf_temp[i] = ff_buf[i];
+        }
+        for (i = 0; i < wrap_odd; ++i) {
+          buf_temp[lin_odd + i] = f->buffer[i];
+        }
       }
 
       tu_hwfifo_write(hwfifo, buf_temp, lin_odd + wrap_odd, access_mode);
