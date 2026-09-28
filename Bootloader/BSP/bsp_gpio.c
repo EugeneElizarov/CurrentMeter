@@ -26,8 +26,8 @@ void BSP_GPIO_ToggleLed(void)
 
 void BSP_GPIO_SetLed(uint8_t state)
 {
-  if(state != 0U)
-  BOOT_LED_PORT->BSRR = 1UL << BOOT_LED_PIN;
+  if (state != 0U)
+    BOOT_LED_PORT->BSRR = 1UL << BOOT_LED_PIN;
   else
-  BOOT_LED_PORT->BSRR = 1UL << (BOOT_LED_PIN + 16U);
+    BOOT_LED_PORT->BSRR = 1UL << (BOOT_LED_PIN + 16U);
 }

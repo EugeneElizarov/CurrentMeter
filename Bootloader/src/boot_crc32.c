@@ -13,7 +13,7 @@ uint32_t BOOT_CalcCRC32(uint32_t addr, uint32_t length)
 
   for(i = 0; i < words; i++)
   {
-  CRC->DR = ptr[i];
+    CRC->DR = ptr[i];
   }
 
   return CRC->DR;

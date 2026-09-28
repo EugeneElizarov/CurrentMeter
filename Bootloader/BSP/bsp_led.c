@@ -26,8 +26,8 @@ void BSP_LED_Init(void)
   SysTick->LOAD = LED_SYSTICK_RELOAD - 1U;
   SysTick->VAL = 0U;
   SysTick->CTRL = SysTick_CTRL_CLKSOURCE_Msk |
-  SysTick_CTRL_TICKINT_Msk |
-  SysTick_CTRL_ENABLE_Msk;
+                  SysTick_CTRL_TICKINT_Msk |
+                  SysTick_CTRL_ENABLE_Msk;
 }
 
 void BSP_LED_Control(BSP_LED_Mode_t mode)
@@ -37,43 +37,55 @@ void BSP_LED_Control(BSP_LED_Mode_t mode)
 
   switch(mode)
   {
-  case BSP_LED_FLASH_1S:
-  ticks_per_toggle = 8U;
-  break;
-  case BSP_LED_FLASH_500MS:
-  ticks_per_toggle = 4U;
-  break;
-  case BSP_LED_FLASH_250MS:
-  ticks_per_toggle = 2U;
-  break;
-  case BSP_LED_FLASH_125MS:
-  ticks_per_toggle = 1U;
-  break;
-  case BSP_LED_ON:
-  LED_PORT->BSRR = 1UL << LED_PIN;
-  led_state = 1U;
-  break;
-  case BSP_LED_OFF:
-  default:
-  LED_PORT->BSRR = 1UL << (LED_PIN + 16U);
-  led_state = 0U;
-  break;
+    case BSP_LED_FLASH_1S:
+    {
+      ticks_per_toggle = 8U;
+      break;
+    }
+    case BSP_LED_FLASH_500MS:
+    {
+      ticks_per_toggle = 4U;
+      break;
+    }
+    case BSP_LED_FLASH_250MS:
+    {
+      ticks_per_toggle = 2U;
+      break;
+    }
+    case BSP_LED_FLASH_125MS:
+    {
+      ticks_per_toggle = 1U;
+      break;
+    }
+    case BSP_LED_ON:
+    {
+      LED_PORT->BSRR = 1UL << LED_PIN;
+      led_state = 1U;
+      break;
+    }
+    case BSP_LED_OFF:
+    default:
+    {
+      LED_PORT->BSRR = 1UL << (LED_PIN + 16U);
+      led_state = 0U;
+      break;
+    }
   }
 }
 
 void SysTick_Handler(void)
 {
-  if(ticks_per_toggle == 0U)
-  return;
+  if (ticks_per_toggle == 0U)
+    return;
 
-  if(++tick_counter >= ticks_per_toggle)
+  if (++tick_counter >= ticks_per_toggle)
   {
-  tick_counter = 0U;
-  led_state ^= 1U;
+    tick_counter = 0U;
+    led_state ^= 1U;
 
-  if(led_state != 0U)
-  LED_PORT->BSRR = 1UL << LED_PIN;
-  else
-  LED_PORT->BSRR = 1UL << (LED_PIN + 16U);
+    if (led_state != 0U)
+      LED_PORT->BSRR = 1UL << LED_PIN;
+    else
+      LED_PORT->BSRR = 1UL << (LED_PIN + 16U);
   }
 }

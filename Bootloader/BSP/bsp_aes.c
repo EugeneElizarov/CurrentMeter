@@ -1,7 +1,8 @@
 // File: bsp_aes.c
 #include "bsp_aes.h"
 
-static const uint8_t sbox[256] = {
+static const uint8_t sbox[256] = 
+{
   0x63,0x7c,0x77,0x7b,0xf2,0x6b,0x6f,0xc5,0x30,0x01,0x67,0x2b,0xfe,0xd7,0xab,0x76,
   0xca,0x82,0xc9,0x7d,0xfa,0x59,0x47,0xf0,0xad,0xd4,0xa2,0xaf,0x9c,0xa4,0x72,0xc0,
   0xb7,0xfd,0x93,0x26,0x36,0x3f,0xf7,0xcc,0x34,0xa5,0xe5,0xf1,0x71,0xd8,0x31,0x15,
@@ -20,7 +21,8 @@ static const uint8_t sbox[256] = {
   0x8c,0xa1,0x89,0x0d,0xbf,0xe6,0x42,0x68,0x41,0x99,0x2d,0x0f,0xb0,0x54,0xbb,0x16
 };
 
-static const uint8_t inv_sbox[256] = {
+static const uint8_t inv_sbox[256] = 
+{
   0x52,0x09,0x6a,0xd5,0x30,0x36,0xa5,0x38,0xbf,0x40,0xa3,0x9e,0x81,0xf3,0xd7,0xfb,
   0x7c,0xe3,0x39,0x82,0x9b,0x2f,0xff,0x87,0x34,0x8e,0x43,0x44,0xc4,0xde,0xe9,0xcb,
   0x54,0x7b,0x94,0x32,0xa6,0xc2,0x23,0x3d,0xee,0x4c,0x95,0x0b,0x42,0xfa,0xc3,0x4e,
@@ -83,29 +85,30 @@ void BSP_AES_Init(BSP_AES_Context_t *ctx, const uint8_t *key)
   uint8_t i, k;
   uint8_t tempa[4];
 
-  for(i = 0; i < 16U; i++) ctx->round_key[i] = key[i];
+  for(i = 0; i < 16U; i++) 
+	  ctx->round_key[i] = key[i];
 
   for(i = 16U; i < 176U; i += 4U)
   {
-  for(k = 0U; k < 4U; k++) tempa[k] = ctx->round_key[i - 4U + k];
+	  for(k = 0U; k < 4U; k++) tempa[k] = ctx->round_key[i - 4U + k];
 
-  if((i % 16U) == 0U)
-  {
-  uint8_t u8tmp = tempa[0];
-  tempa[0] = tempa[1];
-  tempa[1] = tempa[2];
-  tempa[2] = tempa[3];
-  tempa[3] = u8tmp;
+    if ((i % 16U) == 0U)
+    {
+      uint8_t u8tmp = tempa[0];
+      tempa[0] = tempa[1];
+      tempa[1] = tempa[2];
+      tempa[2] = tempa[3];
+      tempa[3] = u8tmp;
 
-  tempa[0] = sbox[tempa[0]];
-  tempa[1] = sbox[tempa[1]];
-  tempa[2] = sbox[tempa[2]];
-  tempa[3] = sbox[tempa[3]];
-  tempa[0] ^= Rcon[i / 16U];
-  }
+      tempa[0] = sbox[tempa[0]];
+      tempa[1] = sbox[tempa[1]];
+      tempa[2] = sbox[tempa[2]];
+      tempa[3] = sbox[tempa[3]];
+      tempa[0] ^= Rcon[i / 16U];
+    }
 
-  for(k = 0U; k < 4U; k++)
-  ctx->round_key[i + k] = ctx->round_key[i - 16U + k] ^ tempa[k];
+    for(k = 0U; k < 4U; k++)
+      ctx->round_key[i + k] = ctx->round_key[i - 16U + k] ^ tempa[k];
   }
 }
 
@@ -149,15 +152,15 @@ static void InvMixColumns(uint8_t state[4][4])
 
   for(i = 0U; i < 4U; i++)
   {
-  uint8_t a = state[0][i];
-  uint8_t b = state[1][i];
-  uint8_t c = state[2][i];
-  uint8_t d = state[3][i];
+    uint8_t a = state[0][i];
+    uint8_t b = state[1][i];
+    uint8_t c = state[2][i];
+    uint8_t d = state[3][i];
 
-  state[0][i] = (uint8_t)(mul14(a) ^ mul11(b) ^ mul13(c) ^ mul9(d));
-  state[1][i] = (uint8_t)(mul9(a) ^ mul14(b) ^ mul11(c) ^ mul13(d));
-  state[2][i] = (uint8_t)(mul13(a) ^ mul9(b) ^ mul14(c) ^ mul11(d));
-  state[3][i] = (uint8_t)(mul11(a) ^ mul13(b) ^ mul9(c) ^ mul14(d));
+    state[0][i] = (uint8_t)(mul14(a) ^ mul11(b) ^ mul13(c) ^ mul9(d));
+    state[1][i] = (uint8_t)(mul9(a) ^ mul14(b) ^ mul11(c) ^ mul13(d));
+    state[2][i] = (uint8_t)(mul13(a) ^ mul9(b) ^ mul14(c) ^ mul11(d));
+    state[3][i] = (uint8_t)(mul11(a) ^ mul13(b) ^ mul9(c) ^ mul14(d));
   }
 }
 
@@ -167,8 +170,8 @@ static void AddRoundKey(uint8_t round, uint8_t state[4][4], const uint8_t *round
   uint8_t j;
 
   for(i = 0U; i < 4U; i++)
-  for(j = 0U; j < 4U; j++)
-  state[i][j] ^= round_key[(round * 16U) + (j * 4U) + i];
+    for(j = 0U; j < 4U; j++)
+      state[i][j] ^= round_key[(round * 16U) + (j * 4U) + i];
 }
 
 void BSP_AES_DecryptBlock(const BSP_AES_Context_t *ctx, const uint8_t *in, uint8_t *out)
@@ -179,17 +182,17 @@ void BSP_AES_DecryptBlock(const BSP_AES_Context_t *ctx, const uint8_t *in, uint8
   uint8_t round;
 
   for(i = 0U; i < 4U; i++)
-  for(j = 0U; j < 4U; j++)
-  state[i][j] = in[i + (4U * j)];
+    for(j = 0U; j < 4U; j++)
+      state[i][j] = in[i + (4U * j)];
 
   AddRoundKey(10U, state, ctx->round_key);
 
   for(round = 9U; round > 0U; round--)
   {
-  InvShiftRows(state);
-  InvSubBytes(state);
-  AddRoundKey(round, state, ctx->round_key);
-  InvMixColumns(state);
+    InvShiftRows(state);
+    InvSubBytes(state);
+    AddRoundKey(round, state, ctx->round_key);
+    InvMixColumns(state);
   }
 
   InvShiftRows(state);
@@ -197,6 +200,6 @@ void BSP_AES_DecryptBlock(const BSP_AES_Context_t *ctx, const uint8_t *in, uint8
   AddRoundKey(0U, state, ctx->round_key);
 
   for(i = 0U; i < 4U; i++)
-  for(j = 0U; j < 4U; j++)
-  out[i + (4U * j)] = state[i][j];
+    for(j = 0U; j < 4U; j++)
+      out[i + (4U * j)] = state[i][j];
 }
