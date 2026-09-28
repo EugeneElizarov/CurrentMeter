@@ -131,6 +131,10 @@ static void setup_received(void){
 }
 static void bus_reset(void){
  USB->DADDR=USB_DADDR_EF;USB->BTABLE=USB_BTABLE_OFFSET;
+ /* STM32F303 PMA buffer addresses are stored in the BTABLE in bytes. */
+ *btw(0,0)=EP0_TX_PMA; *btw(0,2)=EP0_RX_PMA;
+ *btw(1,0)=EP1_TX_PMA;
+ *btw(2,2)=EP2_RX_PMA;
  configure_ep(0,USB_EP_CONTROL,64,64);configure_ep(1,USB_EP_BULK,64,0);configure_ep(2,USB_EP_BULK,0,64);
  set_tx(1,USB_EP_TX_NAK);set_rx(2,USB_EP_RX_NAK);configured=0;pending_addr=0xff;ctrl_state=CTRL_IDLE;USB_MSC_Reset();ctrl_setup_ready();
 }
