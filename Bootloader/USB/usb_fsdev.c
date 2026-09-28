@@ -73,7 +73,7 @@ static void configure_ep(uint8_t ep,uint16_t type,uint16_t tx,uint16_t rx){
  if(tx)set_tx_count(ep,0);
  if(rx)set_rx_count(ep,rx);
  set_tx(ep,USB_EP_TX_NAK);
- set_rx(ep,rx?USB_EP_RX_VALID:USB_EP_RX_DIS);
+ set_rx(ep,rx?USB_EP_RX_VALID:USB_EP_RX_NAK);
 }
 static void ctrl_setup_ready(void){set_rx_count(0,64);set_tx(0,USB_EP_TX_NAK);set_rx(0,USB_EP_RX_VALID);}
 static void ctrl_stall(void){ctrl_state=CTRL_IDLE;set_tx(0,USB_EP_TX_STALL);set_rx(0,USB_EP_RX_STALL);}
