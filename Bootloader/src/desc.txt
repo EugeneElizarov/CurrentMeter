@@ -1,0 +1,9 @@
+Чтобы проект был полностью готов к сборке в Keil MDK, тебе нужно будет создать новый проект (Project -> New uVision Project), выбрать чип STM32F303CB, добавить в него файлы, которые я приведу ниже, и обязательно добавить папку с исходниками библиотеки TinyUSB (скачать с GitHub: tinyusb/src).
+В настройках проекта (Options for Target -> C/C++) добавь пути к заголовочным файлам TinyUSB (tinyusb/src) и к папке с нашими файлами. В настройках Linker укажи путь к Bootloader.sct и сними галочку "Use Memory Layout from Target Dialog".
+
+Финальные шаги для сборки в Keil:
+Создай проект, добавь все файлы выше.
+Скачай TinyUSB с GitHub (https://github.com/hathach/tinyusb).
+В настройках проекта Keil добавь пути к папкам tinyusb/src и tinyusb/src/class/msc.
+Добавь в проект файлы из папки TinyUSB: tusb.c, common/tusb_fifo.c, device/usbd.c, device/usbd_control.c, class/msc/msc_device.c, portable/st/stm32f3/dcd_stm32f3.c (или аналогичный для F3).
+В файле dcd_stm32f3.c (из TinyUSB) убедись, что включено тактирование USB (обычно это делается автоматически при вызове tusb_init(), но если нет — добавь RCC->APB1ENR |= RCC_APB1ENR_USBEN; в функцию инициализации DC).
