@@ -1,5 +1,6 @@
-; STM32F303CBT6 - 128 KiB Flash
-; 16 KiB bootloader + 54 KiB MAIN + 54 KiB BACKUP + 2 x 2 KiB settings
+; STM32F303CBT6 - 128 KiB Flash, 32 KiB SRAM
+; Bootloader occupies the first 16 KiB of Flash.
+; RAM is a separate load region so the linker has an explicit RW/ZI range.
 
 LR_IROM1 0x08000000 0x00004000
 {
@@ -9,7 +10,10 @@ LR_IROM1 0x08000000 0x00004000
         *(InRoot$$Sections)
         .ANY (+RO)
     }
+}
 
+LR_IRAM1 0x20000000 0x00008000
+{
     RW_IRAM1 0x20000000 0x00008000
     {
         .ANY (+RW +ZI)
