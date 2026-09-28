@@ -73,6 +73,9 @@ int32_t tud_msc_write10_cb(uint8_t lun, uint32_t lba, uint32_t offset,
 
     uint32_t file_offset =
         (lba - FAT12_DATA_START_LBA) * FAT12_SECTOR_SIZE + offset;
+    uint32_t a;
+    uint32_t off;
+    uint32_t i;
 
     if (msc_state == BOOT_MSC_STATE_WAIT_HEADER)
     {
@@ -109,7 +112,7 @@ int32_t tud_msc_write10_cb(uint8_t lun, uint32_t lba, uint32_t offset,
         if (!BSP_FLASH_Unlock())
             return TUD_MSC_RET_ERROR;
 
-        for (uint32_t a = BOOT_BACKUP_APP_ADDR;
+        for (a = BOOT_BACKUP_APP_ADDR;
              a < BOOT_BACKUP_APP_ADDR + BOOT_BACKUP_APP_SIZE;
              a += BOOT_FLASH_PAGE_SIZE)
         {
@@ -141,19 +144,19 @@ int32_t tud_msc_write10_cb(uint8_t lun, uint32_t lba, uint32_t offset,
     if ((process_len % BSP_AES_BLOCK_SIZE) != 0U)
         return TUD_MSC_RET_ERROR;
 
-    for (uint32_t off = 0U; off < process_len; off += BSP_AES_BLOCK_SIZE)
+    for (off = 0U; off < process_len; off += BSP_AES_BLOCK_SIZE)
     {
         uint8_t dec[BSP_AES_BLOCK_SIZE];
         uint8_t plain[BSP_AES_BLOCK_SIZE];
 
         BSP_AES_DecryptBlock(&aes_ctx, buffer + off, dec);
 
-        for (uint32_t i = 0U; i < BSP_AES_BLOCK_SIZE; ++i)
+        for (i = 0U; i < BSP_AES_BLOCK_SIZE; ++i)
             plain[i] = (uint8_t)(dec[i] ^ cbc_prev[i]);
 
         memcpy(cbc_prev, buffer + off, BSP_AES_BLOCK_SIZE);
 
-        for (uint32_t i = 0U; i < BSP_AES_BLOCK_SIZE; i += 2U)
+        for (i = 0U; i < BSP_AES_BLOCK_SIZE; i += 2U)
         {
             const uint16_t halfword =
                 (uint16_t)plain[i] | ((uint16_t)plain[i + 1U] << 8);
