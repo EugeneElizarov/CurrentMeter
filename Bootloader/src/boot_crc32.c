@@ -4,17 +4,17 @@
 
 uint32_t BOOT_CalcCRC32(uint32_t addr, uint32_t length)
 {
-    RCC->AHBENR |= RCC_AHBENR_CRCEN;
-    CRC->CR = CRC_CR_RESET;
+  RCC->AHBENR |= RCC_AHBENR_CRCEN;
+  CRC->CR = CRC_CR_RESET;
 
-    uint32_t words = length / 4U;
-    const uint32_t *ptr = (const uint32_t *)addr;
-    uint32_t i;
+  uint32_t words = length / 4U;
+  const uint32_t *ptr = (const uint32_t *)addr;
+  uint32_t i;
 
-    for (i = 0; i < words; i++)
-    {
-        CRC->DR = ptr[i];
-    }
+  for(i = 0; i < words; i++)
+  {
+  CRC->DR = ptr[i];
+  }
 
-    return CRC->DR;
+  return CRC->DR;
 }

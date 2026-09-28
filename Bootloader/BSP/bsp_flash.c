@@ -6,74 +6,74 @@
 
 static bool flash_wait(void)
 {
-    uint32_t timeout;
+  uint32_t timeout;
 
-    for (timeout = FLASH_TIMEOUT; timeout != 0U; --timeout)
-    {
-        if ((FLASH->SR & FLASH_SR_BSY) == 0U)
-            return (FLASH->SR & (FLASH_SR_PGERR | FLASH_SR_WRPERR)) == 0U;
-    }
+  for(timeout = FLASH_TIMEOUT; timeout != 0U; --timeout)
+  {
+  if((FLASH->SR & FLASH_SR_BSY) == 0U)
+  return (FLASH->SR & (FLASH_SR_PGERR | FLASH_SR_WRPERR)) == 0U;
+  }
 
-    return false;
+  return false;
 }
 
 static bool flash_range_valid(uint32_t addr, uint32_t size)
 {
-    return addr >= BOOT_FLASH_BASE &&
-           addr <= BOOT_FLASH_END &&
-           size <= BOOT_FLASH_END - addr;
+  return addr >= BOOT_FLASH_BASE &&
+   addr <= BOOT_FLASH_END &&
+   size <= BOOT_FLASH_END - addr;
 }
 
 bool BSP_FLASH_Unlock(void)
 {
-    if ((FLASH->CR & FLASH_CR_LOCK) == 0U)
-        return true;
+  if((FLASH->CR & FLASH_CR_LOCK) == 0U)
+  return true;
 
-    FLASH->KEYR = 0x45670123U;
-    FLASH->KEYR = 0xCDEF89ABU;
+  FLASH->KEYR = 0x45670123U;
+  FLASH->KEYR = 0xCDEF89ABU;
 
-    return (FLASH->CR & FLASH_CR_LOCK) == 0U;
+  return (FLASH->CR & FLASH_CR_LOCK) == 0U;
 }
 
 void BSP_FLASH_Lock(void)
 {
-    FLASH->CR |= FLASH_CR_LOCK;
+  FLASH->CR |= FLASH_CR_LOCK;
 }
 
 bool BSP_FLASH_ErasePage(uint32_t addr)
 {
-    if ((addr % BOOT_FLASH_PAGE_SIZE) != 0U ||
-        !flash_range_valid(addr, BOOT_FLASH_PAGE_SIZE))
-        return false;
+  if((addr % BOOT_FLASH_PAGE_SIZE) != 0U ||
+  !flash_range_valid(addr, BOOT_FLASH_PAGE_SIZE))
+  return false;
 
-    FLASH->SR = FLASH_SR_EOP | FLASH_SR_PGERR | FLASH_SR_WRPERR;
-    FLASH->CR |= FLASH_CR_PER;
-    FLASH->AR = addr;
-    FLASH->CR |= FLASH_CR_STRT;
+  FLASH->SR = FLASH_SR_EOP | FLASH_SR_PGERR | FLASH_SR_WRPERR;
+  FLASH->CR |= FLASH_CR_PER;
+  FLASH->AR = addr;
+  FLASH->CR |= FLASH_CR_STRT;
 
-    const bool ok = flash_wait();
+  const bool ok = flash_wait();
 
-    FLASH->CR &= ~FLASH_CR_PER;
-    return ok;
+  FLASH->CR &= ~FLASH_CR_PER;
+  return ok;
 }
 
 bool BSP_FLASH_WriteHalfWord(uint32_t addr, uint16_t data)
 {
-    if ((addr & 1U) != 0U || !flash_range_valid(addr, sizeof(uint16_t)))
-        return false;
+  if((addr & 1U) != 0U || !flash_range_valid(addr, sizeof(uint16_t)))
+  return false;
 
-    FLASH->SR = FLASH_SR_EOP | FLASH_SR_PGERR | FLASH_SR_WRPERR;
-    FLASH->CR |= FLASH_CR_PG;
-    *(volatile uint16_t *)(uintptr_t)addr = data;
+  FLASH->SR = FLASH_SR_EOP | FLASH_SR_PGERR | FLASH_SR_WRPERR;
+  FLASH->CR |= FLASH_CR_PG;
+  *(volatile uint16_t *)(uintptr_t)addr = data;
 
-    const bool ok = flash_wait();
+  const bool ok = flash_wait();
 
-    FLASH->CR &= ~FLASH_CR_PG;
-    return ok && *(volatile uint16_t *)(uintptr_t)addr == data;
+  FLASH->CR &= ~FLASH_CR_PG;
+  return ok && *(volatile uint16_t *)(uintptr_t)addr == data;
 }
 
 bool BSP_FLASH_WriteWord(uint32_t addr, uint32_t data)
 {
-    return BSP_FLASH_WriteHalfWord(addr, (uint16_t)data) &&
-           BSP_FLASH_WriteHalfWord(addr + 2U, (uint16_t)(data >> 16));
+  return BSP_FLASH_WriteHalfWord(addr, (uint16_t)data) &&
+   BSP_FLASH_WriteHalfWord(addr + 2U, (uint16_t)(data >> 16));
 }

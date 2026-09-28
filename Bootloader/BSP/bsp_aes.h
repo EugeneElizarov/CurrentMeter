@@ -9,7 +9,7 @@
 
 typedef struct
 {
-    uint8_t round_key[176];
+  uint8_t round_key[176];
 } BSP_AES_Context_t;
 
 void BSP_AES_Init(BSP_AES_Context_t *ctx, const uint8_t *key);

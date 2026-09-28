@@ -10,12 +10,12 @@
 
 typedef enum
 {
-    BSP_LED_OFF = 0,
-    BSP_LED_FLASH_1S,
-    BSP_LED_FLASH_500MS,
-    BSP_LED_FLASH_250MS,
-    BSP_LED_FLASH_125MS,
-    BSP_LED_ON
+  BSP_LED_OFF = 0,
+  BSP_LED_FLASH_1S,
+  BSP_LED_FLASH_500MS,
+  BSP_LED_FLASH_250MS,
+  BSP_LED_FLASH_125MS,
+  BSP_LED_ON
 } BSP_LED_Mode_t;
 
 /* ==============================================================================

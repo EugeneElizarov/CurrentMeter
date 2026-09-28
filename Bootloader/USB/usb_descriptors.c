@@ -19,15 +19,36 @@ static uint16_t mkstr(const char *s){
  uint16_t n=(uint16_t)strlen(s),i;
  if(n>31) n=31;
  str[0]=(uint8_t)(2+n*2); str[1]=3;
- for(i=0;i<n;i++){str[2+i*2]=(uint8_t)s[i];str[3+i*2]=0;}
+ for(i=0;i<n;i++)
+{
+str[2+i*2]=(uint8_t)s[i];str[3+i*2]=0;
+}
  return (uint16_t)(2+n*2);
 }
-const uint8_t *USB_Desc_Device(uint16_t *len){*len=sizeof(dev);return dev;}
-const uint8_t *USB_Desc_Config(uint16_t *len){*len=sizeof(cfg);return cfg;}
+const uint8_t *USB_Desc_Device(uint16_t *len)
+{
+*len=sizeof(dev);return dev;
+}
+const uint8_t *USB_Desc_Config(uint16_t *len)
+{
+*len=sizeof(cfg);return cfg;
+}
 const uint8_t *USB_Desc_String(uint8_t index,uint16_t *len){
- if(index==0){str[0]=4;str[1]=3;str[2]=9;str[3]=4;*len=4;return str;}
- if(index==1){*len=mkstr(BOOT_MANUFACTURER_STR);return str;}
- if(index==2){*len=mkstr(BOOT_PRODUCT_STR);return str;}
- if(index==3){*len=mkstr(BOOT_SERIAL_STR);return str;}
+ if(index==0)
+{
+str[0]=4;str[1]=3;str[2]=9;str[3]=4;*len=4;return str;
+}
+ if(index==1)
+{
+*len=mkstr(BOOT_MANUFACTURER_STR);return str;
+}
+ if(index==2)
+{
+*len=mkstr(BOOT_PRODUCT_STR);return str;
+}
+ if(index==3)
+{
+*len=mkstr(BOOT_SERIAL_STR);return str;
+}
  return 0;
 }
