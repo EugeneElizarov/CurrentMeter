@@ -1,9 +1,72 @@
-Чтобы проект был полностью готов к сборке в Keil MDK, тебе нужно будет создать новый проект (Project -> New uVision Project), выбрать чип STM32F303CB, добавить в него файлы, которые я приведу ниже, и обязательно добавить папку с исходниками библиотеки TinyUSB (скачать с GitHub: tinyusb/src).
-В настройках проекта (Options for Target -> C/C++) добавь пути к заголовочным файлам TinyUSB (tinyusb/src) и к папке с нашими файлами. В настройках Linker укажи путь к Bootloader.sct и сними галочку "Use Memory Layout from Target Dialog".
+CurrentMeter Bootloader
+========================
 
-Финальные шаги для сборки в Keil:
-Создай проект, добавь все файлы выше.
-Скачай TinyUSB с GitHub (https://github.com/hathach/tinyusb).
-В настройках проекта Keil добавь пути к папкам tinyusb/src и tinyusb/src/class/msc.
-Добавь в проект файлы из папки TinyUSB: tusb.c, common/tusb_fifo.c, device/usbd.c, device/usbd_control.c, class/msc/msc_device.c, portable/st/stm32f3/dcd_stm32f3.c (или аналогичный для F3).
-В файле dcd_stm32f3.c (из TinyUSB) убедись, что включено тактирование USB (обычно это делается автоматически при вызове tusb_init(), но если нет — добавь RCC->APB1ENR |= RCC_APB1ENR_USBEN; в функцию инициализации DC).
+The Keil MDK project is already present at:
+    Bootloader/Keil/CurrentMeter_Bootloader.uvprojx
+
+Target:
+    STM32F303CBTx
+    Cortex-M4
+    128 KiB Flash
+    32 KiB SRAM
+    HSE 12 MHz
+    SYSCLK 72 MHz
+    USB FS 48 MHz
+
+Build requirements
+------------------
+- Keil MDK / ARM Compiler 6
+- The project uses the CMSIS files stored in this repository.
+- TinyUSB sources used by the bootloader are stored in:
+      TinyUSB/src
+
+Do not replace the vendored TinyUSB STM32 FSDEV driver with the old
+"portable/st/stm32f3" path mentioned in older project notes. The current
+project uses:
+    TinyUSB/src/portable/st/stm32_fsdev/dcd_stm32_fsdev.c
+    TinyUSB/src/portable/st/stm32_fsdev/fsdev_common.c
+
+Bootloader memory map
+---------------------
+    0x08000000 .. 0x08003FFF  Bootloader (16 KiB)
+    0x08004000 .. 0x080117FF  Main application (54 KiB)
+    0x08011800 .. 0x0801EFFF  Backup application (54 KiB)
+    0x0801F000 .. 0x0801F7FF  Settings copy 1 (2 KiB)
+    0x0801F800 .. 0x0801FFFF  Settings copy 2 (2 KiB)
+
+The two settings pages are used as an atomic A/B pair. A new copy is written
+to the inactive page and validated by CRC before it can become the active copy.
+
+USB update protocol
+-------------------
+The bootloader exposes a small FAT12 MSC volume containing UPDATE.BIN.
+The update file consists of:
+    BOOT_FW_Header_t
+    AES-128-CBC encrypted application image
+
+The firmware image size must be a multiple of 16 bytes. The final USB sector
+may contain FAT12 file padding; only bytes belonging to the declared payload
+size are decrypted and written to Flash.
+
+The AES key and IV in bootloader_config.h are deliberately zero test values.
+They MUST be replaced before production firmware images are generated.
+
+USB IRQ routing
+---------------
+STM32F303xB/C uses the shared USB_HP_CAN_TX and USB_LP_CAN_RX0 interrupt
+vectors by default. The bootloader forwards both vectors to TinyUSB.
+The remapped USB_HP/USB_LP handlers are also forwarded for configurations
+where USB interrupt remapping is enabled.
+
+Verification
+------------
+The bootloader validates:
+- firmware header magic/device type/CPU ID;
+- header CRC32;
+- decrypted image CRC32;
+- application vector table;
+- dual-copy settings CRC32 and sequence number.
+
+A successful update is first stored in the backup image area. On reboot,
+the bootloader validates the current application and, if necessary, copies
+the valid backup image into the main application area before jumping to it.
