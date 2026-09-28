@@ -1,10 +1,11 @@
 // File: usb_descriptors.c
 #include "tusb.h"
 #include "bootloader_config.h"
+#include <string.h>
 
 #define USBD_DESC_LEN (9 + 9 + 7 + 7)
 
-tusb_desc_device_t const desc_device =
+static tusb_desc_device_t const desc_device =
 {
     .bLength            = sizeof(tusb_desc_device_t),
     .bDescriptorType    = TUSB_DESC_DEVICE,
@@ -22,7 +23,7 @@ tusb_desc_device_t const desc_device =
     .bNumConfigurations = 0x01
 };
 
-uint8_t const desc_configuration[] =
+static uint8_t const desc_configuration[] =
 {
     TUD_CONFIG_DESCRIPTOR(1, 1, 0, USBD_DESC_LEN, 0x00, 100),
     TUD_MSC_DESCRIPTOR(0, 0, 0x81, 0x02, 64)
@@ -30,9 +31,9 @@ uint8_t const desc_configuration[] =
 
 static uint16_t _desc_str[32];
 
-uint16_t const* tud_descriptor_device_cb(void)
+uint8_t const* tud_descriptor_device_cb(void)
 {
-    return (uint16_t const*) &desc_device;
+    return (uint8_t const*) &desc_device;
 }
 
 uint8_t const* tud_descriptor_configuration_cb(uint8_t index)
@@ -48,7 +49,7 @@ uint16_t const* tud_descriptor_string_cb(uint8_t index, uint16_t langid)
 
     if (index == 0)
     {
-        memcpy(&_desc_str[1], "\x09\x04", 2);
+        memcpy(&_desc_str[1], "	", 2);
         chr_count = 1;
     }
     else
@@ -59,12 +60,12 @@ uint16_t const* tud_descriptor_string_cb(uint8_t index, uint16_t langid)
         else if (index == 3) str = BOOT_SERIAL_STR;
         else return NULL;
 
-        chr_count = strlen(str);
-        if (chr_count > 31) chr_count = 31;
+        chr_count = (uint8_t)strlen(str);
+        if (chr_count > 31U) chr_count = 31U;
 
         for (uint8_t i = 0; i < chr_count; i++) _desc_str[1 + i] = str[i];
     }
 
-    _desc_str[0] = (TUSB_DESC_STRING << 8) | (2 * chr_count + 2);
+    _desc_str[0] = (uint16_t)((TUSB_DESC_STRING << 8) | (2U * chr_count + 2U));
     return _desc_str;
 }
