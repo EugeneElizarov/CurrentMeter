@@ -1,0 +1,1183 @@
+Rebuild started: Project: CurrentMeter_Bootloader
+*** Using Compiler 'V6.16', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'CurrentMeter_Bootloader'
+compiling bsp_fat12.c...
+../src/main.c(2): warning: In file included from...
+../BSP\bsp_rcc.h(13): warning: no newline at end of file [-Wnewline-eof]
+#endif /* BSP_RCC_H */
+                      ^
+../src/main.c(4): warning: In file included from...
+../BSP\bsp_usb_msc.h(10): warning: no newline at end of file [-Wnewline-eof]
+#endif /* BSP_USB_MSC_H */
+                          ^
+../src/main.c(7): warning: In file included from...
+../src/boot_crc32.h(9): warning: no newline at end of file [-Wnewline-eof]
+#endif /* BOOT_CRC32_H */
+                         ^
+../src/main.c(9): warning: In file included from...
+../../TinyUSB/src\tusb.h(18): warning: In file included from...
+../../TinyUSB/src/common/tusb_common.h(63): warning: In file included from...
+../../TinyUSB/src\tusb_option.h(10): warning: In file included from...
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+#define TU_ARGS_NUM(...)   TU_NARG_IMPL(_0, ##__VA_ARGS__, TU_NARG_RSEQ_N())
+                                            ^
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../src/main.c(9): warning: In file included from...
+../../TinyUSB/src\tusb.h(18): warning: In file included from...
+../../TinyUSB/src/common/tusb_common.h(63): warning: In file included from...
+../../TinyUSB/src\tusb_option.h(270): warning: In file included from...
+../../TinyUSB/src/common/tusb_mcu.h(241): warning: 'CFG_TUSB_FSDEV_PMA_SIZE' macro redefined [-Wmacro-redefined]
+    #define CFG_TUSB_FSDEV_PMA_SIZE 512u
+            ^
+../src\tusb_config.h(19): note: previous definition is here
+#define CFG_TUSB_FSDEV_PMA_SIZE 512U
+        ^
+../src/main.c(9): warning: In file included from...
+../../TinyUSB/src\tusb.h(18): warning: In file included from...
+../../TinyUSB/src/common/tusb_common.h(63): warning: In file included from...
+../../TinyUSB/src\tusb_option.h(10): warning: In file included from...
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+#define TU_ARGS_NUM(...)   TU_NARG_IMPL(_0, ##__VA_ARGS__, TU_NARG_RSEQ_N())
+                                            ^
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../src/main.c(9): warning: In file included from...
+../../TinyUSB/src\tusb.h(19): warning: In file included from...
+../../TinyUSB/src\osal/osal.h(36): warning: In file included from...
+../../TinyUSB/src/osal/osal_none.h(159): warning: In file included from...
+../../TinyUSB/src\common/tusb_fifo.h(118): warning: padding struct 'struct (anonymous at ../../TinyUSB/src\common/tusb_fifo.h:116:3)' with 2 bytes to align 'ptr' [-Wpadded]
+    uint8_t *ptr; // buffer pointer
+             ^
+../src/main.c(9): warning: In file included from...
+../../TinyUSB/src\tusb.h(63): warning: In file included from...
+../../TinyUSB/src/device/usbd.h(23): warning: padding size of 'tud_configure_dwc2_t' with 1 byte to alignment boundary [-Wpadded]
+typedef struct {
+        ^
+../src/main.c(135): warning: no previous prototype for function 'CAN_TX_IRQHandler' [-Wmissing-prototypes]
+void USB_HP_CAN_TX_IRQHandler(void)
+     ^
+../../CMSIS/Device/ST/STM32F3xx/Include/stm32f303x8.h(12122): note: expanded from macro 'USB_HP_CAN_TX_IRQHandler'
+#define USB_HP_CAN_TX_IRQHandler  CAN_TX_IRQHandler
+                                  ^
+../src/main.c(135): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void USB_HP_CAN_TX_IRQHandler(void)
+^
+static 
+../src/main.c(140): warning: no previous prototype for function 'CAN_RX0_IRQHandler' [-Wmissing-prototypes]
+void USB_LP_CAN_RX0_IRQHandler(void)
+     ^
+../../CMSIS/Device/ST/STM32F3xx/Include/stm32f303x8.h(12121): note: expanded from macro 'USB_LP_CAN_RX0_IRQHandler'
+#define USB_LP_CAN_RX0_IRQHandler CAN_RX0_IRQHandler
+                                  ^
+../src/main.c(140): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void USB_LP_CAN_RX0_IRQHandler(void)
+^
+static 
+../src/main.c(145): warning: no previous prototype for function 'USB_HP_IRQHandler' [-Wmissing-prototypes]
+void USB_HP_IRQHandler(void)
+     ^
+../src/main.c(145): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void USB_HP_IRQHandler(void)
+^
+static 
+../src/main.c(150): warning: no previous prototype for function 'USB_LP_IRQHandler' [-Wmissing-prototypes]
+void USB_LP_IRQHandler(void)
+     ^
+../src/main.c(150): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void USB_LP_IRQHandler(void)
+^
+static 
+../src/main.c(155): warning: no previous prototype for function 'HardFault_Handler' [-Wmissing-prototypes]
+void HardFault_Handler(void) { while (1) {} }
+     ^
+../src/main.c(155): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void HardFault_Handler(void) { while (1) {} }
+^
+static 
+../src/main.c(155): warning: function 'HardFault_Handler' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+void HardFault_Handler(void) { while (1) {} }
+                             ^
+../src/main.c(156): warning: no previous prototype for function 'MemManage_Handler' [-Wmissing-prototypes]
+void MemManage_Handler(void) { while (1) {} }
+     ^
+../src/main.c(156): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void MemManage_Handler(void) { while (1) {} }
+^
+static 
+../src/main.c(156): warning: function 'MemManage_Handler' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+void MemManage_Handler(void) { while (1) {} }
+                             ^
+../src/main.c(157): warning: no previous prototype for function 'BusFault_Handler' [-Wmissing-prototypes]
+void BusFault_Handler(void) { while (1) {} }
+     ^
+../src/main.c(157): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void BusFault_Handler(void) { while (1) {} }
+^
+static 
+../src/main.c(157): warning: function 'BusFault_Handler' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+void BusFault_Handler(void) { while (1) {} }
+                            ^
+../src/main.c(158): warning: no previous prototype for function 'UsageFault_Handler' [-Wmissing-prototypes]
+void UsageFault_Handler(void) { while (1) {} }
+     ^
+../src/main.c(158): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void UsageFault_Handler(void) { while (1) {} }
+^
+static 
+../src/main.c(158): warning: function 'UsageFault_Handler' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+void UsageFault_Handler(void) { while (1) {} }
+                              ^
+../src/main.c(159): warning: no previous prototype for function 'SVC_Handler' [-Wmissing-prototypes]
+void SVC_Handler(void) {}
+     ^
+../src/main.c(159): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void SVC_Handler(void) {}
+^
+static 
+../src/main.c(160): warning: no previous prototype for function 'DebugMon_Handler' [-Wmissing-prototypes]
+void DebugMon_Handler(void) {}
+     ^
+../src/main.c(160): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void DebugMon_Handler(void) {}
+^
+static 
+../src/main.c(161): warning: no previous prototype for function 'PendSV_Handler' [-Wmissing-prototypes]
+void PendSV_Handler(void) {}
+     ^
+../src/main.c(161): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void PendSV_Handler(void) {}
+^
+static 
+50 warnings generated.
+compiling main.c...
+compiling system_stm32f3xx.c...
+../BSP/bsp_aes.c(2): warning: In file included from...
+../BSP/bsp_aes.h(18): warning: no newline at end of file [-Wnewline-eof]
+#endif /* BSP_AES_H */
+                      ^
+../BSP/bsp_aes.c(46): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    return (uint8_t)((x << 1) ^ (((x >> 7) & 1U) * 0x1BU));
+                      ~~^~~~  ~
+2 warnings generated.
+compiling bsp_aes.c...
+assembling startup_stm32f303xc.s...
+../src/boot_crc32.c(2): warning: In file included from...
+../src/boot_crc32.h(9): warning: no newline at end of file [-Wnewline-eof]
+#endif /* BOOT_CRC32_H */
+                         ^
+1 warning generated.
+compiling boot_crc32.c...
+compiling bsp_gpio.c...
+../BSP/bsp_settings.c(3): warning: In file included from...
+../src\boot_crc32.h(9): warning: no newline at end of file [-Wnewline-eof]
+#endif /* BOOT_CRC32_H */
+                         ^
+1 warning generated.
+compiling bsp_settings.c...
+../BSP/bsp_led.c(57): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+        default:
+        ^
+../BSP/bsp_led.c(64): warning: no previous prototype for function 'SysTick_Handler' [-Wmissing-prototypes]
+void SysTick_Handler(void)
+     ^
+../BSP/bsp_led.c(64): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void SysTick_Handler(void)
+^
+static 
+2 warnings generated.
+compiling bsp_led.c...
+../src/usb_descriptors.c(2): warning: In file included from...
+../../TinyUSB/src\tusb.h(18): warning: In file included from...
+../../TinyUSB/src/common/tusb_common.h(63): warning: In file included from...
+../../TinyUSB/src\tusb_option.h(10): warning: In file included from...
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+#define TU_ARGS_NUM(...)   TU_NARG_IMPL(_0, ##__VA_ARGS__, TU_NARG_RSEQ_N())
+                                            ^
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../src/usb_descriptors.c(2): warning: In file included from...
+../../TinyUSB/src\tusb.h(18): warning: In file included from...
+../../TinyUSB/src/common/tusb_common.h(63): warning: In file included from...
+../../TinyUSB/src\tusb_option.h(270): warning: In file included from...
+../../TinyUSB/src/common/tusb_mcu.h(241): warning: 'CFG_TUSB_FSDEV_PMA_SIZE' macro redefined [-Wmacro-redefined]
+    #define CFG_TUSB_FSDEV_PMA_SIZE 512u
+            ^
+../src\tusb_config.h(19): note: previous definition is here
+#define CFG_TUSB_FSDEV_PMA_SIZE 512U
+        ^
+../src/usb_descriptors.c(2): warning: In file included from...
+../../TinyUSB/src\tusb.h(18): warning: In file included from...
+../../TinyUSB/src/common/tusb_common.h(63): warning: In file included from...
+../../TinyUSB/src\tusb_option.h(10): warning: In file included from...
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+#define TU_ARGS_NUM(...)   TU_NARG_IMPL(_0, ##__VA_ARGS__, TU_NARG_RSEQ_N())
+                                            ^
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../src/usb_descriptors.c(2): warning: In file included from...
+../../TinyUSB/src\tusb.h(19): warning: In file included from...
+../../TinyUSB/src\osal/osal.h(36): warning: In file included from...
+../../TinyUSB/src/osal/osal_none.h(159): warning: In file included from...
+../../TinyUSB/src\common/tusb_fifo.h(118): warning: padding struct 'struct (anonymous at ../../TinyUSB/src\common/tusb_fifo.h:116:3)' with 2 bytes to align 'ptr' [-Wpadded]
+    uint8_t *ptr; // buffer pointer
+             ^
+../src/usb_descriptors.c(2): warning: In file included from...
+../../TinyUSB/src\tusb.h(63): warning: In file included from...
+../../TinyUSB/src/device/usbd.h(23): warning: padding size of 'tud_configure_dwc2_t' with 1 byte to alignment boundary [-Wpadded]
+typedef struct {
+        ^
+32 warnings generated.
+compiling usb_descriptors.c...
+../BSP/bsp_rcc.c(2): warning: In file included from...
+../BSP/bsp_rcc.h(13): warning: no newline at end of file [-Wnewline-eof]
+#endif /* BSP_RCC_H */
+                      ^
+1 warning generated.
+compiling bsp_rcc.c...
+compiling bsp_flash.c...
+../../TinyUSB/src/tusb.c(8): warning: In file included from...
+../../TinyUSB/src/tusb_option.h(10): warning: In file included from...
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+#define TU_ARGS_NUM(...)   TU_NARG_IMPL(_0, ##__VA_ARGS__, TU_NARG_RSEQ_N())
+                                            ^
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/tusb.c(8): warning: In file included from...
+../../TinyUSB/src/tusb_option.h(270): warning: In file included from...
+../../TinyUSB/src/common/tusb_mcu.h(241): warning: 'CFG_TUSB_FSDEV_PMA_SIZE' macro redefined [-Wmacro-redefined]
+    #define CFG_TUSB_FSDEV_PMA_SIZE 512u
+            ^
+../src\tusb_config.h(19): note: previous definition is here
+#define CFG_TUSB_FSDEV_PMA_SIZE 512U
+        ^
+../../TinyUSB/src/tusb.c(8): warning: In file included from...
+../../TinyUSB/src/tusb_option.h(10): warning: In file included from...
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+#define TU_ARGS_NUM(...)   TU_NARG_IMPL(_0, ##__VA_ARGS__, TU_NARG_RSEQ_N())
+                                            ^
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/tusb.c(12): warning: In file included from...
+../../TinyUSB/src/tusb.h(19): warning: In file included from...
+../../TinyUSB/src\osal/osal.h(36): warning: In file included from...
+../../TinyUSB/src/osal/osal_none.h(159): warning: In file included from...
+../../TinyUSB/src\common/tusb_fifo.h(118): warning: padding struct 'struct (anonymous at ../../TinyUSB/src\common/tusb_fifo.h:116:3)' with 2 bytes to align 'ptr' [-Wpadded]
+    uint8_t *ptr; // buffer pointer
+             ^
+../../TinyUSB/src/tusb.c(12): warning: In file included from...
+../../TinyUSB/src/tusb.h(63): warning: In file included from...
+../../TinyUSB/src/device/usbd.h(23): warning: padding size of 'tud_configure_dwc2_t' with 1 byte to alignment boundary [-Wpadded]
+typedef struct {
+        ^
+../../TinyUSB/src/tusb.c(73): warning: code will never be executed [-Wunreachable-code]
+      .speed = TUD_OPT_HIGH_SPEED ? TUSB_SPEED_HIGH : TUSB_SPEED_FULL
+                                    ^~~~~~~~~~~~~~~
+../../TinyUSB/src/tusb.c(13): warning: In file included from...
+../../TinyUSB/src\common/tusb_private.h(42): warning: padding struct 'tu_edpt_stream_t' with 1 byte to align 'mps' [-Wpadded]
+  uint16_t mps;
+           ^
+../../TinyUSB/src/tusb.c(12): warning: In file included from...
+../../TinyUSB/src/tusb.h(19): warning: In file included from...
+../../TinyUSB/src\osal/osal.h(36): warning: In file included from...
+../../TinyUSB/src/osal/osal_none.h(159): warning: In file included from...
+../../TinyUSB/src/common/tusb_fifo.h(106): warning: padding struct 'tu_fifo_t' with 1 byte to align 'wr_idx' [-Wpadded]
+  volatile uint16_t wr_idx;     // write index
+                    ^
+../../TinyUSB/src/common/tusb_fifo.h(125): warning: padding struct 'tu_hwfifo_access_t' with 3 bytes to align 'param' [-Wpadded]
+  uintptr_t param;
+            ^
+36 warnings generated.
+compiling tusb.c...
+../BSP/bsp_usb_msc.c(1): warning: In file included from...
+../BSP/bsp_usb_msc.h(10): warning: no newline at end of file [-Wnewline-eof]
+#endif /* BSP_USB_MSC_H */
+                          ^
+../BSP/bsp_usb_msc.c(4): warning: In file included from...
+../BSP/bsp_aes.h(18): warning: no newline at end of file [-Wnewline-eof]
+#endif /* BSP_AES_H */
+                      ^
+../BSP/bsp_usb_msc.c(6): warning: In file included from...
+../src\boot_crc32.h(9): warning: no newline at end of file [-Wnewline-eof]
+#endif /* BOOT_CRC32_H */
+                         ^
+../BSP/bsp_usb_msc.c(10): warning: In file included from...
+../../TinyUSB/src\tusb.h(18): warning: In file included from...
+../../TinyUSB/src/common/tusb_common.h(63): warning: In file included from...
+../../TinyUSB/src\tusb_option.h(10): warning: In file included from...
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+#define TU_ARGS_NUM(...)   TU_NARG_IMPL(_0, ##__VA_ARGS__, TU_NARG_RSEQ_N())
+                                            ^
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../BSP/bsp_usb_msc.c(10): warning: In file included from...
+../../TinyUSB/src\tusb.h(18): warning: In file included from...
+../../TinyUSB/src/common/tusb_common.h(63): warning: In file included from...
+../../TinyUSB/src\tusb_option.h(270): warning: In file included from...
+../../TinyUSB/src/common/tusb_mcu.h(241): warning: 'CFG_TUSB_FSDEV_PMA_SIZE' macro redefined [-Wmacro-redefined]
+    #define CFG_TUSB_FSDEV_PMA_SIZE 512u
+            ^
+../src\tusb_config.h(19): note: previous definition is here
+#define CFG_TUSB_FSDEV_PMA_SIZE 512U
+        ^
+../BSP/bsp_usb_msc.c(10): warning: In file included from...
+../../TinyUSB/src\tusb.h(18): warning: In file included from...
+../../TinyUSB/src/common/tusb_common.h(63): warning: In file included from...
+../../TinyUSB/src\tusb_option.h(10): warning: In file included from...
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+#define TU_ARGS_NUM(...)   TU_NARG_IMPL(_0, ##__VA_ARGS__, TU_NARG_RSEQ_N())
+                                            ^
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../BSP/bsp_usb_msc.c(10): warning: In file included from...
+../../TinyUSB/src\tusb.h(19): warning: In file included from...
+../../TinyUSB/src\osal/osal.h(36): warning: In file included from...
+../../TinyUSB/src/osal/osal_none.h(159): warning: In file included from...
+../../TinyUSB/src\common/tusb_fifo.h(118): warning: padding struct 'struct (anonymous at ../../TinyUSB/src\common/tusb_fifo.h:116:3)' with 2 bytes to align 'ptr' [-Wpadded]
+    uint8_t *ptr; // buffer pointer
+             ^
+../BSP/bsp_usb_msc.c(10): warning: In file included from...
+../../TinyUSB/src\tusb.h(63): warning: In file included from...
+../../TinyUSB/src/device/usbd.h(23): warning: padding size of 'tud_configure_dwc2_t' with 1 byte to alignment boundary [-Wpadded]
+typedef struct {
+        ^
+../BSP/bsp_usb_msc.c(162): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+                (uint16_t)plain[i] | ((uint16_t)plain[i + 1U] << 8);
+                ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+36 warnings generated.
+compiling bsp_usb_msc.c...
+../../TinyUSB/src/common/tusb_fifo.c(9): warning: In file included from...
+../../TinyUSB/src\osal/osal.h(15): warning: In file included from...
+../../TinyUSB/src\common/tusb_common.h(63): warning: In file included from...
+../../TinyUSB/src\tusb_option.h(10): warning: In file included from...
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+#define TU_ARGS_NUM(...)   TU_NARG_IMPL(_0, ##__VA_ARGS__, TU_NARG_RSEQ_N())
+                                            ^
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_fifo.c(9): warning: In file included from...
+../../TinyUSB/src\osal/osal.h(15): warning: In file included from...
+../../TinyUSB/src\common/tusb_common.h(63): warning: In file included from...
+../../TinyUSB/src\tusb_option.h(270): warning: In file included from...
+../../TinyUSB/src/common/tusb_mcu.h(241): warning: 'CFG_TUSB_FSDEV_PMA_SIZE' macro redefined [-Wmacro-redefined]
+    #define CFG_TUSB_FSDEV_PMA_SIZE 512u
+            ^
+../src\tusb_config.h(19): note: previous definition is here
+#define CFG_TUSB_FSDEV_PMA_SIZE 512U
+        ^
+../../TinyUSB/src/common/tusb_fifo.c(9): warning: In file included from...
+../../TinyUSB/src\osal/osal.h(15): warning: In file included from...
+../../TinyUSB/src\common/tusb_common.h(63): warning: In file included from...
+../../TinyUSB/src\tusb_option.h(10): warning: In file included from...
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+#define TU_ARGS_NUM(...)   TU_NARG_IMPL(_0, ##__VA_ARGS__, TU_NARG_RSEQ_N())
+                                            ^
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_fifo.c(9): warning: In file included from...
+../../TinyUSB/src\osal/osal.h(36): warning: In file included from...
+../../TinyUSB/src\osal/osal_none.h(159): warning: In file included from...
+../../TinyUSB/src\common/tusb_fifo.h(118): warning: padding struct 'struct (anonymous at ../../TinyUSB/src\common/tusb_fifo.h:116:3)' with 2 bytes to align 'ptr' [-Wpadded]
+    uint8_t *ptr; // buffer pointer
+             ^
+../../TinyUSB/src/common/tusb_fifo.h(106): warning: padding struct 'tu_fifo_t' with 1 byte to align 'wr_idx' [-Wpadded]
+  volatile uint16_t wr_idx;     // write index
+                    ^
+../../TinyUSB/src/common/tusb_fifo.h(125): warning: padding struct 'tu_hwfifo_access_t' with 3 bytes to align 'param' [-Wpadded]
+  uintptr_t param;
+            ^
+33 warnings generated.
+compiling tusb_fifo.c...
+../../TinyUSB/src/device/usbd.c(8): warning: In file included from...
+../../TinyUSB/src\tusb_option.h(10): warning: In file included from...
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+#define TU_ARGS_NUM(...)   TU_NARG_IMPL(_0, ##__VA_ARGS__, TU_NARG_RSEQ_N())
+                                            ^
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/device/usbd.c(8): warning: In file included from...
+../../TinyUSB/src\tusb_option.h(270): warning: In file included from...
+../../TinyUSB/src/common/tusb_mcu.h(241): warning: 'CFG_TUSB_FSDEV_PMA_SIZE' macro redefined [-Wmacro-redefined]
+    #define CFG_TUSB_FSDEV_PMA_SIZE 512u
+            ^
+../src\tusb_config.h(19): note: previous definition is here
+#define CFG_TUSB_FSDEV_PMA_SIZE 512U
+        ^
+../../TinyUSB/src/device/usbd.c(8): warning: In file included from...
+../../TinyUSB/src\tusb_option.h(10): warning: In file included from...
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+#define TU_ARGS_NUM(...)   TU_NARG_IMPL(_0, ##__VA_ARGS__, TU_NARG_RSEQ_N())
+                                            ^
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/device/usbd.c(12): warning: In file included from...
+../../TinyUSB/src\device/dcd.h(12): warning: In file included from...
+../../TinyUSB/src\osal/osal.h(36): warning: In file included from...
+../../TinyUSB/src\osal/osal_none.h(159): warning: In file included from...
+../../TinyUSB/src\common/tusb_fifo.h(118): warning: padding struct 'struct (anonymous at ../../TinyUSB/src\common/tusb_fifo.h:116:3)' with 2 bytes to align 'ptr' [-Wpadded]
+    uint8_t *ptr; // buffer pointer
+             ^
+../../TinyUSB/src/device/usbd.c(12): warning: In file included from...
+../../TinyUSB/src\device/dcd.h(66): warning: padding struct 'struct dcd_event_t::(anonymous at ../../TinyUSB/src\device/dcd.h:63:5)' with 2 bytes to align 'len' [-Wpadded]
+      uint32_t len;
+               ^
+../../TinyUSB/src\device/dcd.h(48): warning: padding struct 'dcd_event_t' with 2 bytes to align anonymous bit-field [-Wpadded]
+  union {
+  ^
+../../TinyUSB/src/device/usbd.c(13): warning: In file included from...
+../../TinyUSB/src\tusb.h(63): warning: In file included from...
+../../TinyUSB/src/device/usbd.h(23): warning: padding size of 'tud_configure_dwc2_t' with 1 byte to alignment boundary [-Wpadded]
+typedef struct {
+        ^
+../../TinyUSB/src/device/usbd.c(119): warning: padding size of 'struct (anonymous at ../../TinyUSB/src/device/usbd.c:119:5)' with 6 bits to alignment boundary [-Wpadded]
+    struct TU_ATTR_PACKED {
+    ^
+../../TinyUSB/src/device/usbd.c(399): warning: no previous extern declaration for non-static variable '_usbd_qdef' [-Wmissing-variable-declarations]
+OSAL_QUEUE_DEF(usbd_int_set, _usbd_qdef, CFG_TUD_TASK_QUEUE_SZ, dcd_event_t);
+                             ^
+../../TinyUSB/src/device/usbd.c(399): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+OSAL_QUEUE_DEF(usbd_int_set, _usbd_qdef, CFG_TUD_TASK_QUEUE_SZ, dcd_event_t);
+^
+../../TinyUSB/src\osal/osal_none.h(172): note: expanded from macro 'OSAL_QUEUE_DEF'
+  osal_queue_def_t _name = {.interrupt_set = _int_set,                                                 \
+  ^
+../../TinyUSB/src/device/usbd.c(12): warning: In file included from...
+../../TinyUSB/src\device/dcd.h(12): warning: In file included from...
+../../TinyUSB/src/osal/osal.h(36): warning: In file included from...
+../../TinyUSB/src\osal/osal_none.h(159): warning: In file included from...
+../../TinyUSB/src/common/tusb_fifo.h(106): warning: padding struct 'tu_fifo_t' with 1 byte to align 'wr_idx' [-Wpadded]
+  volatile uint16_t wr_idx;     // write index
+                    ^
+../../TinyUSB/src/device/usbd.c(12): warning: In file included from...
+../../TinyUSB/src\device/dcd.h(12): warning: In file included from...
+../../TinyUSB/src/osal/osal.h(36): warning: In file included from...
+../../TinyUSB/src\osal/osal_none.h(164): warning: padding struct 'osal_queue_def_t' with 2 bytes to align 'ff' [-Wpadded]
+  tu_fifo_t ff;
+            ^
+../../TinyUSB/src/device/usbd.c(110): warning: padding size of 'usbd_device_t' with 1 byte to alignment boundary [-Wpadded]
+typedef struct {
+        ^
+../../TinyUSB/src/device/usbd.c(574): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    TU_LOG_USBD("%s init\r\n", driver->name);
+                                            ^
+../../TinyUSB/src/device/usbd.c(593): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+  TU_LOG_USBD("USBD deinit on controller %u\r\n", rhport);
+                                                         ^
+../../TinyUSB/src/device/usbd.c(608): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+      TU_LOG_USBD("%s deinit\r\n", driver->name);
+                                                ^
+../../TinyUSB/src/device/usbd.c(693): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+      TU_LOG_USBD("USBD event limit (" TU_XSTRING(CFG_TUD_TASK_EVENTS_PER_RUN) ") reached\r\n");
+                                                                                               ^
+../../TinyUSB/src/device/usbd.c(736): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+          TU_LOG_USBD("  Skipped since there is other SETUP in queue\r\n");
+                                                                          ^
+../../TinyUSB/src/device/usbd.c(750): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+          TU_LOG_USBD("  Stall EP0\r\n");
+                                        ^
+../../TinyUSB/src/device/usbd.c(763): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        TU_LOG_USBD("on EP %02X with %u bytes\r\n", ep_addr, (unsigned int) event.xfer_complete.len);
+                                                                                                    ^
+../../TinyUSB/src/device/usbd.c(784): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+            TU_LOG_USBD("  Control stage not continued\r\n");
+                                                            ^
+../../TinyUSB/src/device/usbd.c(787): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+          TU_LOG_USBD("  %s xfer callback\r\n", driver->name);
+                                                             ^
+../../TinyUSB/src/device/usbd.c(798): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+          TU_LOG_USBD(": Remote Wakeup = %u\r\n", _usbd_dev.remote_wakeup_en);
+                                                                             ^
+../../TinyUSB/src/device/usbd.c(801): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+          TU_LOG_USBD(" Skipped\r\n");
+                                     ^
+../../TinyUSB/src/device/usbd.c(807): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+          TU_LOG_USBD("\r\n");
+                             ^
+../../TinyUSB/src/device/usbd.c(810): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+          TU_LOG_USBD(" Skipped\r\n");
+                                     ^
+../../TinyUSB/src/device/usbd.c(823): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+          TU_LOG_USBD("\r\n");
+                             ^
+../../TinyUSB/src/device/usbd.c(975): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+  TU_LOG_USBD("  %s control request\r\n", driver->name);
+                                                       ^
+../../TinyUSB/src/device/usbd.c(1003): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+          TU_LOG_USBD("  Clear current Configuration (%u) before switching\r\n", _usbd_dev.cfg_num);
+                                                                                                   ^
+../../TinyUSB/src/device/usbd.c(1066): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+      TU_LOG_USBD("    Disable Remote Wakeup\r\n");
+                                                  ^
+../../TinyUSB/src/device/usbd.c(1311): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        TU_LOG_USBD("  %s opened\r\n", driver->name);
+                                                    ^
+../../TinyUSB/src/device/usbd.c(1331): warning: cast from function call of type 'uint8_t' (aka 'unsigned char') to non-matching type 'tusb_desc_type_t' [-Wbad-function-cast]
+  tusb_desc_type_t const desc_type = (tusb_desc_type_t) tu_u16_high(p_request->wValue);
+                                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../TinyUSB/src/device/usbd.c(1336): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+      TU_LOG_USBD(" Device\r\n");
+                                ^
+../../TinyUSB/src/device/usbd.c(1338): warning: cast from function call of type 'const uint8_t *' (aka 'const unsigned char *') to non-matching type 'uintptr_t' (aka 'unsigned int') [-Wbad-function-cast]
+      void *desc_device = (void *)(uintptr_t)tud_descriptor_device_cb();
+                                             ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../../TinyUSB/src/device/usbd.c(1356): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+      TU_LOG_USBD(" BOS\r\n");
+                             ^
+../../TinyUSB/src/device/usbd.c(1359): warning: cast from function call of type 'const uint8_t *' (aka 'const unsigned char *') to non-matching type 'uintptr_t' (aka 'unsigned int') [-Wbad-function-cast]
+      uintptr_t desc_bos = (uintptr_t) tud_descriptor_bos_cb();
+                                       ^~~~~~~~~~~~~~~~~~~~~~~
+../../TinyUSB/src/device/usbd.c(1374): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        TU_LOG_USBD(" Configuration[%u]\r\n", desc_index);
+                                                         ^
+../../TinyUSB/src/device/usbd.c(1375): warning: cast from function call of type 'const uint8_t *' (aka 'const unsigned char *') to non-matching type 'uintptr_t' (aka 'unsigned int') [-Wbad-function-cast]
+        desc_config = (uintptr_t) tud_descriptor_configuration_cb(desc_index);
+                                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../TinyUSB/src/device/usbd.c(1379): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        TU_LOG_USBD(" Other Speed Configuration\r\n");
+                                                     ^
+../../TinyUSB/src/device/usbd.c(1380): warning: cast from function call of type 'const uint8_t *' (aka 'const unsigned char *') to non-matching type 'uintptr_t' (aka 'unsigned int') [-Wbad-function-cast]
+        desc_config = (uintptr_t) tud_descriptor_other_speed_configuration_cb(desc_index);
+                                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../TinyUSB/src/device/usbd.c(1392): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+      TU_LOG_USBD(" String[%u]\r\n", desc_index);
+                                                ^
+../../TinyUSB/src/device/usbd.c(1404): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+      TU_LOG_USBD(" Device Qualifier\r\n");
+                                          ^
+../../TinyUSB/src/device/usbd.c(1334): warning: 14 enumeration values not explicitly handled in switch: 'TUSB_DESC_INTERFACE', 'TUSB_DESC_ENDPOINT', 'TUSB_DESC_INTERFACE_POWER'... [-Wswitch-enum]
+  switch(desc_type) { //-V2520
+         ^
+../../TinyUSB/src/device/usbd.c(1529): error: function definition is not allowed here
+void usbd_int_set(bool enabled) {
+                                ^
+../../TinyUSB/src/device/usbd.c(1537): error: function definition is not allowed here
+void usbd_spin_lock(bool in_isr) {
+                                 ^
+../../TinyUSB/src/device/usbd.c(1540): error: function definition is not allowed here
+void usbd_spin_unlock(bool in_isr) {
+                                   ^
+../../TinyUSB/src/device/usbd.c(1546): error: function definition is not allowed here
+                         uint8_t *ep_in) {
+                                         ^
+../../TinyUSB/src/device/usbd.c(1567): error: function definition is not allowed here
+void usbd_defer_func(osal_task_func_t func, void* param, bool in_isr) {
+                                                                      ^
+../../TinyUSB/src/device/usbd.c(1582): error: function definition is not allowed here
+bool usbd_edpt_open(uint8_t rhport, tusb_desc_endpoint_t const* desc_ep) {
+                                                                         ^
+../../TinyUSB/src/device/usbd.c(1591): error: function definition is not allowed here
+bool usbd_edpt_claim(uint8_t rhport, uint8_t ep_addr) {
+                                                      ^
+../../TinyUSB/src/device/usbd.c(1602): error: function definition is not allowed here
+bool usbd_edpt_release(uint8_t rhport, uint8_t ep_addr) {
+                                                        ^
+../../TinyUSB/src/device/usbd.c(1610): error: function definition is not allowed here
+void usbd_edpt_rx_consume(uint8_t rhport, uint8_t ep_addr) {
+                                                           ^
+../../TinyUSB/src/device/usbd.c(1625): error: function definition is not allowed here
+bool usbd_edpt_xfer(uint8_t rhport, uint8_t ep_addr, uint8_t* buffer, uint16_t total_bytes, bool is_isr) {
+                                                                                                         ^
+../../TinyUSB/src/device/usbd.c(1666): error: function definition is not allowed here
+bool usbd_edpt_xfer_fifo(uint8_t rhport, uint8_t ep_addr, tu_fifo_t* ff, uint16_t total_bytes, bool is_isr) {
+                                                                                                            ^
+../../TinyUSB/src/device/usbd.c(1703): error: function definition is not allowed here
+bool usbd_edpt_busy(uint8_t rhport, uint8_t ep_addr) {
+                                                     ^
+../../TinyUSB/src/device/usbd.c(1712): error: function definition is not allowed here
+void usbd_edpt_stall(uint8_t rhport, uint8_t ep_addr) {
+                                                      ^
+../../TinyUSB/src/device/usbd.c(1724): error: function definition is not allowed here
+void usbd_edpt_clear_stall(uint8_t rhport, uint8_t ep_addr) {
+                                                            ^
+../../TinyUSB/src/device/usbd.c(1747): error: function definition is not allowed here
+bool usbd_edpt_stalled(uint8_t rhport, uint8_t ep_addr) {
+                                                        ^
+../../TinyUSB/src/device/usbd.c(1760): error: function definition is not allowed here
+void usbd_edpt_close(uint8_t rhport, uint8_t ep_addr) {
+                                                      ^
+../../TinyUSB/src/device/usbd.c(1779): error: function definition is not allowed here
+void usbd_sof_enable(uint8_t rhport, sof_consumer_t consumer, bool en) {
+                                                                       ^
+../../TinyUSB/src/device/usbd.c(1796): error: function definition is not allowed here
+bool usbd_edpt_iso_alloc(uint8_t rhport, uint8_t ep_addr, uint16_t largest_packet_size) {
+                                                                                        ^
+../../TinyUSB/src/device/usbd.c(1808): error: function definition is not allowed here
+bool usbd_edpt_iso_activate(uint8_t rhport, tusb_desc_endpoint_t const* desc_ep) {
+                                                                                 ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+69 warnings and 20 errors generated.
+compiling usbd.c...
+../../TinyUSB/src/portable/st/stm32_fsdev/dcd_stm32_fsdev.c(75): warning: In file included from...
+../../TinyUSB/src\tusb_option.h(10): warning: In file included from...
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+#define TU_ARGS_NUM(...)   TU_NARG_IMPL(_0, ##__VA_ARGS__, TU_NARG_RSEQ_N())
+                                            ^
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/portable/st/stm32_fsdev/dcd_stm32_fsdev.c(75): warning: In file included from...
+../../TinyUSB/src\tusb_option.h(270): warning: In file included from...
+../../TinyUSB/src/common/tusb_mcu.h(241): warning: 'CFG_TUSB_FSDEV_PMA_SIZE' macro redefined [-Wmacro-redefined]
+    #define CFG_TUSB_FSDEV_PMA_SIZE 512u
+            ^
+../src\tusb_config.h(19): note: previous definition is here
+#define CFG_TUSB_FSDEV_PMA_SIZE 512U
+        ^
+../../TinyUSB/src/portable/st/stm32_fsdev/dcd_stm32_fsdev.c(75): warning: In file included from...
+../../TinyUSB/src\tusb_option.h(10): warning: In file included from...
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+#define TU_ARGS_NUM(...)   TU_NARG_IMPL(_0, ##__VA_ARGS__, TU_NARG_RSEQ_N())
+                                            ^
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/portable/st/stm32_fsdev/dcd_stm32_fsdev.c(79): warning: In file included from...
+../../TinyUSB/src\device/dcd.h(12): warning: In file included from...
+../../TinyUSB/src\osal/osal.h(36): warning: In file included from...
+../../TinyUSB/src\osal/osal_none.h(159): warning: In file included from...
+../../TinyUSB/src\common/tusb_fifo.h(118): warning: padding struct 'struct (anonymous at ../../TinyUSB/src\common/tusb_fifo.h:116:3)' with 2 bytes to align 'ptr' [-Wpadded]
+    uint8_t *ptr; // buffer pointer
+             ^
+../../TinyUSB/src/portable/st/stm32_fsdev/dcd_stm32_fsdev.c(79): warning: In file included from...
+../../TinyUSB/src\device/dcd.h(66): warning: padding struct 'struct dcd_event_t::(anonymous at ../../TinyUSB/src\device/dcd.h:63:5)' with 2 bytes to align 'len' [-Wpadded]
+      uint32_t len;
+               ^
+../../TinyUSB/src\device/dcd.h(48): warning: padding struct 'dcd_event_t' with 2 bytes to align anonymous bit-field [-Wpadded]
+  union {
+  ^
+../../TinyUSB/src/portable/st/stm32_fsdev/dcd_stm32_fsdev.c(80): warning: In file included from...
+../../TinyUSB/src/portable/st/stm32_fsdev/fsdev_common.h(207): warning: padding size of 'struct (anonymous at ../../TinyUSB/src/portable/st/stm32_fsdev/fsdev_common.h:207:3)' with 2 bytes to alignment boundary [-Wpadded]
+  struct {
+  ^
+../../TinyUSB/src/portable/st/stm32_fsdev/fsdev_common.h(213): warning: padding struct 'fsdev_regs_t' with 2 bytes to align 'ISTR' [-Wpadded]
+  _va32 fsdev_bus_t ISTR;         // 44: Interrupt status register
+                    ^
+../../TinyUSB/src/portable/st/stm32_fsdev/fsdev_common.h(214): warning: padding struct 'fsdev_regs_t' with 2 bytes to align 'FNR' [-Wpadded]
+  _va32 fsdev_bus_t FNR;          // 48: Frame number register
+                    ^
+../../TinyUSB/src/portable/st/stm32_fsdev/fsdev_common.h(215): warning: padding struct 'fsdev_regs_t' with 2 bytes to align 'DADDR' [-Wpadded]
+  _va32 fsdev_bus_t DADDR;        // 4C: Device address register
+                    ^
+../../TinyUSB/src/portable/st/stm32_fsdev/fsdev_common.h(216): warning: padding struct 'fsdev_regs_t' with 2 bytes to align 'BTABLE' [-Wpadded]
+  _va32 fsdev_bus_t BTABLE;       // 50: Buffer Table address register
+                    ^
+../../TinyUSB/src/portable/st/stm32_fsdev/fsdev_common.h(217): warning: padding struct 'fsdev_regs_t' with 2 bytes to align 'LPMCSR' [-Wpadded]
+  _va32 fsdev_bus_t LPMCSR;       // 54: LPM Control and Status (not on F1, F3, AT32, CH32)
+                    ^
+../../TinyUSB/src/portable/st/stm32_fsdev/fsdev_common.h(218): warning: padding struct 'fsdev_regs_t' with 2 bytes to align 'BCDR' [-Wpadded]
+  _va32 fsdev_bus_t BCDR;         // 58: Battery Charging Detector (not on F1, F3, AT32, CH32)
+                    ^
+../../TinyUSB/src/portable/st/stm32_fsdev/fsdev_common.h(206): warning: padding size of 'fsdev_regs_t' with 2 bytes to alignment boundary [-Wpadded]
+typedef struct {
+        ^
+../../TinyUSB/src/portable/st/stm32_fsdev/fsdev_common.h(258): warning: padding struct 'struct (anonymous at ../../TinyUSB/src/portable/st/stm32_fsdev/fsdev_common.h:256:3)' with 2 bytes to align 'count' [-Wpadded]
+    volatile fsdev_addr_data_align uint16_t count;
+                                            ^
+../../TinyUSB/src/portable/st/stm32_fsdev/fsdev_common.h(256): warning: padding size of 'struct (anonymous at ../../TinyUSB/src/portable/st/stm32_fsdev/fsdev_common.h:256:3)' with 2 bytes to alignment boundary [-Wpadded]
+  struct {
+  ^
+../../TinyUSB/src/portable/st/stm32_fsdev/dcd_stm32_fsdev.c(75): warning: In file included from...
+../../TinyUSB/src\tusb_option.h(10): warning: In file included from...
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+#define TU_ARGS_NUM(...)   TU_NARG_IMPL(_0, ##__VA_ARGS__, TU_NARG_RSEQ_N())
+                                            ^
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/portable/st/stm32_fsdev/dcd_stm32_fsdev.c(80): warning: In file included from...
+../../TinyUSB/src/portable/st/stm32_fsdev/fsdev_common.h(336): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+  *reg ^= (state << (U_EPTX_STAT_Pos + (dir == TUSB_DIR_IN ? 0 : 8)));
+       ~~  ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../TinyUSB/src/portable/st/stm32_fsdev/fsdev_common.h(340): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+  *reg ^= (state << (U_EP_DTOG_TX_Pos + (dir == TUSB_DIR_IN ? 0 : 8)));
+       ~~  ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../TinyUSB/src/portable/st/stm32_fsdev/fsdev_common.h(369): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+  *reg ^= (state << (U_EPTX_STAT_Pos + (dir == TUSB_DIR_IN ? 8 : 0)));
+       ~~  ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../TinyUSB/src/portable/st/stm32_fsdev/fsdev_common.h(373): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+  *reg ^= (state << (U_EP_DTOG_TX_Pos + (dir == TUSB_DIR_IN ? 8 : 0)));
+       ~~  ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../TinyUSB/src/portable/st/stm32_fsdev/dcd_stm32_fsdev.c(246): error: function definition is not allowed here
+static void handle_ctr_tx(uint32_t ep_id) {
+                                          ^
+../../TinyUSB/src/portable/st/stm32_fsdev/dcd_stm32_fsdev.c(281): error: function definition is not allowed here
+static void handle_ctr_setup(uint32_t ep_id) {
+                                             ^
+../../TinyUSB/src/portable/st/stm32_fsdev/dcd_stm32_fsdev.c(313): error: function definition is not allowed here
+static void handle_ctr_rx(uint32_t ep_id) {
+                                          ^
+../../TinyUSB/src/portable/st/stm32_fsdev/dcd_stm32_fsdev.c(372): error: function definition is not allowed here
+void dcd_int_handler(uint8_t rhport) {
+                                     ^
+../../TinyUSB/src/portable/st/stm32_fsdev/dcd_stm32_fsdev.c(457): error: function definition is not allowed here
+void dcd_edpt0_status_complete(uint8_t rhport, const tusb_control_request_t *request) {
+                                                                                      ^
+../../TinyUSB/src/portable/st/stm32_fsdev/dcd_stm32_fsdev.c(472): error: function definition is not allowed here
+static uint32_t dcd_pma_alloc(uint16_t len, bool dbuf) {
+                                                       ^
+../../TinyUSB/src/portable/st/stm32_fsdev/dcd_stm32_fsdev.c(495): error: function definition is not allowed here
+static uint8_t dcd_ep_alloc(uint8_t ep_addr, uint8_t ep_type) {
+                                                              ^
+../../TinyUSB/src/portable/st/stm32_fsdev/dcd_stm32_fsdev.c(875): error: expected '}'
+#endif
+      ^
+../../TinyUSB/src/portable/st/stm32_fsdev/dcd_stm32_fsdev.c(220): note: to match this '{'
+static void handle_bus_reset(uint8_t rhport) {
+                                             ^
+51 warnings and 8 errors generated.
+compiling dcd_stm32_fsdev.c...
+../../TinyUSB/src/device/usbd_control.c(1): warning: In file included from...
+../../TinyUSB/src\tusb_option.h(10): warning: In file included from...
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+#define TU_ARGS_NUM(...)   TU_NARG_IMPL(_0, ##__VA_ARGS__, TU_NARG_RSEQ_N())
+                                            ^
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/device/usbd_control.c(1): warning: In file included from...
+../../TinyUSB/src\tusb_option.h(270): warning: In file included from...
+../../TinyUSB/src/common/tusb_mcu.h(241): warning: 'CFG_TUSB_FSDEV_PMA_SIZE' macro redefined [-Wmacro-redefined]
+    #define CFG_TUSB_FSDEV_PMA_SIZE 512u
+            ^
+../src\tusb_config.h(19): note: previous definition is here
+#define CFG_TUSB_FSDEV_PMA_SIZE 512U
+        ^
+../../TinyUSB/src/device/usbd_control.c(1): warning: In file included from...
+../../TinyUSB/src\tusb_option.h(10): warning: In file included from...
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+#define TU_ARGS_NUM(...)   TU_NARG_IMPL(_0, ##__VA_ARGS__, TU_NARG_RSEQ_N())
+                                            ^
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/device/usbd_control.c(3): warning: In file included from...
+../../TinyUSB/src\device/dcd.h(12): warning: In file included from...
+../../TinyUSB/src\osal/osal.h(36): warning: In file included from...
+../../TinyUSB/src\osal/osal_none.h(159): warning: In file included from...
+../../TinyUSB/src\common/tusb_fifo.h(118): warning: padding struct 'struct (anonymous at ../../TinyUSB/src\common/tusb_fifo.h:116:3)' with 2 bytes to align 'ptr' [-Wpadded]
+    uint8_t *ptr; // buffer pointer
+             ^
+../../TinyUSB/src/device/usbd_control.c(3): warning: In file included from...
+../../TinyUSB/src\device/dcd.h(66): warning: padding struct 'struct dcd_event_t::(anonymous at ../../TinyUSB/src\device/dcd.h:63:5)' with 2 bytes to align 'len' [-Wpadded]
+      uint32_t len;
+               ^
+../../TinyUSB/src\device/dcd.h(48): warning: padding struct 'dcd_event_t' with 2 bytes to align anonymous bit-field [-Wpadded]
+  union {
+  ^
+../../TinyUSB/src/device/usbd_control.c(4): warning: In file included from...
+../../TinyUSB/src\tusb.h(63): warning: In file included from...
+../../TinyUSB/src/device/usbd.h(23): warning: padding size of 'tud_configure_dwc2_t' with 1 byte to alignment boundary [-Wpadded]
+typedef struct {
+        ^
+34 warnings generated.
+compiling usbd_control.c...
+../../TinyUSB/src/portable/st/stm32_fsdev/fsdev_common.c(9): warning: In file included from...
+../../TinyUSB/src\tusb_option.h(10): warning: In file included from...
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+#define TU_ARGS_NUM(...)   TU_NARG_IMPL(_0, ##__VA_ARGS__, TU_NARG_RSEQ_N())
+                                            ^
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/portable/st/stm32_fsdev/fsdev_common.c(9): warning: In file included from...
+../../TinyUSB/src\tusb_option.h(270): warning: In file included from...
+../../TinyUSB/src/common/tusb_mcu.h(241): warning: 'CFG_TUSB_FSDEV_PMA_SIZE' macro redefined [-Wmacro-redefined]
+    #define CFG_TUSB_FSDEV_PMA_SIZE 512u
+            ^
+../src\tusb_config.h(19): note: previous definition is here
+#define CFG_TUSB_FSDEV_PMA_SIZE 512U
+        ^
+../../TinyUSB/src/portable/st/stm32_fsdev/fsdev_common.c(9): warning: In file included from...
+../../TinyUSB/src\tusb_option.h(10): warning: In file included from...
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+#define TU_ARGS_NUM(...)   TU_NARG_IMPL(_0, ##__VA_ARGS__, TU_NARG_RSEQ_N())
+                                            ^
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/portable/st/stm32_fsdev/fsdev_common.c(13): warning: In file included from...
+../../TinyUSB/src/portable/st/stm32_fsdev/fsdev_common.h(20): warning: In file included from...
+../../TinyUSB/src\device/dcd.h(12): warning: In file included from...
+../../TinyUSB/src\osal/osal.h(36): warning: In file included from...
+../../TinyUSB/src\osal/osal_none.h(159): warning: In file included from...
+../../TinyUSB/src\common/tusb_fifo.h(118): warning: padding struct 'struct (anonymous at ../../TinyUSB/src\common/tusb_fifo.h:116:3)' with 2 bytes to align 'ptr' [-Wpadded]
+    uint8_t *ptr; // buffer pointer
+             ^
+../../TinyUSB/src/portable/st/stm32_fsdev/fsdev_common.c(13): warning: In file included from...
+../../TinyUSB/src/portable/st/stm32_fsdev/fsdev_common.h(20): warning: In file included from...
+../../TinyUSB/src\device/dcd.h(66): warning: padding struct 'struct dcd_event_t::(anonymous at ../../TinyUSB/src\device/dcd.h:63:5)' with 2 bytes to align 'len' [-Wpadded]
+      uint32_t len;
+               ^
+../../TinyUSB/src\device/dcd.h(48): warning: padding struct 'dcd_event_t' with 2 bytes to align anonymous bit-field [-Wpadded]
+  union {
+  ^
+../../TinyUSB/src/portable/st/stm32_fsdev/fsdev_common.c(13): warning: In file included from...
+../../TinyUSB/src/portable/st/stm32_fsdev/fsdev_common.h(207): warning: padding size of 'struct (anonymous at ../../TinyUSB/src/portable/st/stm32_fsdev/fsdev_common.h:207:3)' with 2 bytes to alignment boundary [-Wpadded]
+  struct {
+  ^
+../../TinyUSB/src/portable/st/stm32_fsdev/fsdev_common.h(213): warning: padding struct 'fsdev_regs_t' with 2 bytes to align 'ISTR' [-Wpadded]
+  _va32 fsdev_bus_t ISTR;         // 44: Interrupt status register
+                    ^
+../../TinyUSB/src/portable/st/stm32_fsdev/fsdev_common.h(214): warning: padding struct 'fsdev_regs_t' with 2 bytes to align 'FNR' [-Wpadded]
+  _va32 fsdev_bus_t FNR;          // 48: Frame number register
+                    ^
+../../TinyUSB/src/portable/st/stm32_fsdev/fsdev_common.h(215): warning: padding struct 'fsdev_regs_t' with 2 bytes to align 'DADDR' [-Wpadded]
+  _va32 fsdev_bus_t DADDR;        // 4C: Device address register
+                    ^
+../../TinyUSB/src/portable/st/stm32_fsdev/fsdev_common.h(216): warning: padding struct 'fsdev_regs_t' with 2 bytes to align 'BTABLE' [-Wpadded]
+  _va32 fsdev_bus_t BTABLE;       // 50: Buffer Table address register
+                    ^
+../../TinyUSB/src/portable/st/stm32_fsdev/fsdev_common.h(217): warning: padding struct 'fsdev_regs_t' with 2 bytes to align 'LPMCSR' [-Wpadded]
+  _va32 fsdev_bus_t LPMCSR;       // 54: LPM Control and Status (not on F1, F3, AT32, CH32)
+                    ^
+../../TinyUSB/src/portable/st/stm32_fsdev/fsdev_common.h(218): warning: padding struct 'fsdev_regs_t' with 2 bytes to align 'BCDR' [-Wpadded]
+  _va32 fsdev_bus_t BCDR;         // 58: Battery Charging Detector (not on F1, F3, AT32, CH32)
+                    ^
+../../TinyUSB/src/portable/st/stm32_fsdev/fsdev_common.h(206): warning: padding size of 'fsdev_regs_t' with 2 bytes to alignment boundary [-Wpadded]
+typedef struct {
+        ^
+../../TinyUSB/src/portable/st/stm32_fsdev/fsdev_common.h(258): warning: padding struct 'struct (anonymous at ../../TinyUSB/src/portable/st/stm32_fsdev/fsdev_common.h:256:3)' with 2 bytes to align 'count' [-Wpadded]
+    volatile fsdev_addr_data_align uint16_t count;
+                                            ^
+../../TinyUSB/src/portable/st/stm32_fsdev/fsdev_common.h(256): warning: padding size of 'struct (anonymous at ../../TinyUSB/src/portable/st/stm32_fsdev/fsdev_common.h:256:3)' with 2 bytes to alignment boundary [-Wpadded]
+  struct {
+  ^
+../../TinyUSB/src/portable/st/stm32_fsdev/fsdev_common.c(9): warning: In file included from...
+../../TinyUSB/src\tusb_option.h(10): warning: In file included from...
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+#define TU_ARGS_NUM(...)   TU_NARG_IMPL(_0, ##__VA_ARGS__, TU_NARG_RSEQ_N())
+                                            ^
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/portable/st/stm32_fsdev/fsdev_common.c(13): warning: In file included from...
+../../TinyUSB/src/portable/st/stm32_fsdev/fsdev_common.h(336): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+  *reg ^= (state << (U_EPTX_STAT_Pos + (dir == TUSB_DIR_IN ? 0 : 8)));
+       ~~  ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../TinyUSB/src/portable/st/stm32_fsdev/fsdev_common.h(340): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+  *reg ^= (state << (U_EP_DTOG_TX_Pos + (dir == TUSB_DIR_IN ? 0 : 8)));
+       ~~  ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../TinyUSB/src/portable/st/stm32_fsdev/fsdev_common.h(369): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+  *reg ^= (state << (U_EPTX_STAT_Pos + (dir == TUSB_DIR_IN ? 8 : 0)));
+       ~~  ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../TinyUSB/src/portable/st/stm32_fsdev/fsdev_common.h(373): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+  *reg ^= (state << (U_EP_DTOG_TX_Pos + (dir == TUSB_DIR_IN ? 8 : 0)));
+       ~~  ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../TinyUSB/src/portable/st/stm32_fsdev/fsdev_common.c(86): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+  uint16_t bl_nb = (blsize << 15) | ((num_block - blsize) << 10);
+           ~~~~~   ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+52 warnings generated.
+compiling fsdev_common.c...
+../../TinyUSB/src/class/msc/msc_device.c(8): warning: In file included from...
+../../TinyUSB/src\tusb_option.h(10): warning: In file included from...
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+#define TU_ARGS_NUM(...)   TU_NARG_IMPL(_0, ##__VA_ARGS__, TU_NARG_RSEQ_N())
+                                            ^
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/class/msc/msc_device.c(8): warning: In file included from...
+../../TinyUSB/src\tusb_option.h(270): warning: In file included from...
+../../TinyUSB/src/common/tusb_mcu.h(241): warning: 'CFG_TUSB_FSDEV_PMA_SIZE' macro redefined [-Wmacro-redefined]
+    #define CFG_TUSB_FSDEV_PMA_SIZE 512u
+            ^
+../src\tusb_config.h(19): note: previous definition is here
+#define CFG_TUSB_FSDEV_PMA_SIZE 512U
+        ^
+../../TinyUSB/src/class/msc/msc_device.c(8): warning: In file included from...
+../../TinyUSB/src\tusb_option.h(10): warning: In file included from...
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+#define TU_ARGS_NUM(...)   TU_NARG_IMPL(_0, ##__VA_ARGS__, TU_NARG_RSEQ_N())
+                                            ^
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+../../TinyUSB/src/class/msc/msc_device.c(12): warning: In file included from...
+../../TinyUSB/src\device/dcd.h(12): warning: In file included from...
+../../TinyUSB/src\osal/osal.h(36): warning: In file included from...
+../../TinyUSB/src\osal/osal_none.h(159): warning: In file included from...
+../../TinyUSB/src\common/tusb_fifo.h(118): warning: padding struct 'struct (anonymous at ../../TinyUSB/src\common/tusb_fifo.h:116:3)' with 2 bytes to align 'ptr' [-Wpadded]
+    uint8_t *ptr; // buffer pointer
+             ^
+../../TinyUSB/src/class/msc/msc_device.c(12): warning: In file included from...
+../../TinyUSB/src\device/dcd.h(66): warning: padding struct 'struct dcd_event_t::(anonymous at ../../TinyUSB/src\device/dcd.h:63:5)' with 2 bytes to align 'len' [-Wpadded]
+      uint32_t len;
+               ^
+../../TinyUSB/src\device/dcd.h(48): warning: padding struct 'dcd_event_t' with 2 bytes to align anonymous bit-field [-Wpadded]
+  union {
+  ^
+../../TinyUSB/src/class/msc/msc_device.c(13): warning: In file included from...
+../../TinyUSB/src\device/usbd.h(23): warning: padding size of 'tud_configure_dwc2_t' with 1 byte to alignment boundary [-Wpadded]
+typedef struct {
+        ^
+../../TinyUSB/src/class/msc/msc_device.c(158): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+      TU_LOG_DRV("  SCSI case 2 (Hn < Di) or case 3 (Hn < Do) \r\n");
+                                                                    ^
+../../TinyUSB/src/class/msc/msc_device.c(165): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+      TU_LOG_DRV("  SCSI case 10 (Ho <> Di)\r\n");
+                                                 ^
+../../TinyUSB/src/class/msc/msc_device.c(168): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+      TU_LOG_DRV("  SCSI case 8 (Hi <> Do)\r\n");
+                                                ^
+../../TinyUSB/src/class/msc/msc_device.c(171): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+      TU_LOG_DRV("  SCSI case 4 Hi > Dn (READ10) or case 9 Ho > Dn (WRITE10) \r\n");
+                                                                                   ^
+../../TinyUSB/src/class/msc/msc_device.c(174): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+      TU_LOG_DRV(" Computed block size = 0. SCSI case 7 Hi < Di (READ10) or case 13 Ho < Do (WRIT10)\r\n");
+                                                                                                          ^
+../../TinyUSB/src/class/msc/msc_device.c(8): warning: In file included from...
+../../TinyUSB/src\tusb_option.h(10): warning: In file included from...
+../../TinyUSB/src/common/tusb_compiler.h(64): warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+#define TU_ARGS_NUM(...)   TU_NARG_IMPL(_0, ##__VA_ARGS__, TU_NARG_RSEQ_N())
+                                            ^
+../../TinyUSB/src/class/msc/msc_device.c(47): warning: padding size of 'mscd_interface_t' with 3 bytes to alignment boundary [-Wpadded]
+typedef struct {
+        ^
+../../TinyUSB/src/class/msc/msc_device.c(437): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+      TU_LOG_DRV("  MSC Get Max Lun\r\n");
+                                         ^
+../../TinyUSB/src/class/msc/msc_device.c(472): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        TU_LOG_DRV("  SCSI CBW is not valid\r\n");
+                                                 ^
+../../TinyUSB/src/class/msc/msc_device.c(481): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+      TU_LOG_DRV("  SCSI Command [Lun%u]: %s\r\n", p_cbw->lun, tu_lookup_find(&_msc_scsi_cmd_table, p_cbw->command[0]));
+                                                                                                                       ^
+../../TinyUSB/src/class/msc/msc_device.c(516): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+            TU_LOG_DRV("  SCSI reject non READ10/WRITE10 with large data\r\n");
+                                                                              ^
+../../TinyUSB/src/class/msc/msc_device.c(535): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+            TU_LOG_DRV("  SCSI unsupported or failed command\r\n");
+                                                                  ^
+../../TinyUSB/src/class/msc/msc_device.c(587): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+            TU_LOG_DRV("  SCSI unsupported command\r\n");
+                                                        ^
+../../TinyUSB/src/class/msc/msc_device.c(611): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        TU_LOG_DRV("  SCSI Status [Lun%u] = %u\r\n", p_cbw->lun, p_csw->status);
+                                                                               ^
+48 warnings generated.
+compiling msc_device.c...
+".\.axf" - 27 Error(s), 448 Warning(s).
+Target not created.
+Build Time Elapsed:  00:00:03
