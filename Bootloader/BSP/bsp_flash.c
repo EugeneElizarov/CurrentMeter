@@ -6,7 +6,9 @@
 
 static bool flash_wait(void)
 {
-    for (uint32_t timeout = FLASH_TIMEOUT; timeout != 0U; --timeout)
+    uint32_t timeout;
+
+    for (timeout = FLASH_TIMEOUT; timeout != 0U; --timeout)
     {
         if ((FLASH->SR & FLASH_SR_BSY) == 0U)
             return (FLASH->SR & (FLASH_SR_PGERR | FLASH_SR_WRPERR)) == 0U;
