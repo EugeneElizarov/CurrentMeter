@@ -499,7 +499,7 @@ bool USB_MSC_Control(const USB_SetupPacket_t *setup,
 {
     static uint8_t max_lun = 0U;
 
-    if ((setup->bmRequestType & 0x7FU) == 0xA1U &&
+    if (setup->bmRequestType == 0xA1U &&
         setup->bRequest == REQ_GET_LUN &&
         setup->wLength == 1U)
     {
