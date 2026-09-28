@@ -1,6 +1,6 @@
 // File: bsp_rcc.c
 #include "bsp_rcc.h"
-#include "stm32f303xb.h"
+#include "stm32f3xx.h"
 
 void BSP_RCC_Init(void)
 {

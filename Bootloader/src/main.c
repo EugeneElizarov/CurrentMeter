@@ -1,4 +1,4 @@
-#include "stm32f303xb.h"
+#include "stm32f3xx.h"
 #include "bsp_rcc.h"
 #include "bsp_led.h"
 #include "bsp_usb_msc.h"
@@ -6,13 +6,6 @@
 #include "bsp_settings.h"
 #include "boot_crc32.h"
 #include "bootloader_defs.h"
-
-void SystemInit(void)
-{
-#if (__FPU_PRESENT == 1) && (__FPU_USED == 1)
-    SCB->CPACR |= ((3UL << 20) | (3UL << 22));
-#endif
-}
 
 static bool vector_valid(uint32_t addr, uint32_t size)
 {

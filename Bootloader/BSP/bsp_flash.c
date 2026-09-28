@@ -1,5 +1,5 @@
 #include "bsp_flash.h"
-#include "stm32f303xb.h"
+#include "stm32f3xx.h"
 
 static bool flash_wait(void)
 {
