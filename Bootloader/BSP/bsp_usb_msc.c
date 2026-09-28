@@ -135,11 +135,13 @@ int32_t tud_msc_write10_cb(uint8_t lun, uint32_t lba, uint32_t offset,
     if (file_offset != sizeof(BOOT_FW_Header_t) + payload_written)
         return TUD_MSC_RET_ERROR;
 
-    if ((bufsize % BSP_AES_BLOCK_SIZE) != 0U ||
-        payload_written + bufsize > fw_header.payload_size)
+    const uint32_t remaining = fw_header.payload_size - payload_written;
+    const uint32_t process_len = (bufsize < remaining) ? bufsize : remaining;
+
+    if ((process_len % BSP_AES_BLOCK_SIZE) != 0U)
         return TUD_MSC_RET_ERROR;
 
-    for (uint32_t off = 0U; off < bufsize; off += BSP_AES_BLOCK_SIZE)
+    for (uint32_t off = 0U; off < process_len; off += BSP_AES_BLOCK_SIZE)
     {
         uint8_t dec[BSP_AES_BLOCK_SIZE];
         uint8_t plain[BSP_AES_BLOCK_SIZE];
@@ -167,7 +169,7 @@ int32_t tud_msc_write10_cb(uint8_t lun, uint32_t lba, uint32_t offset,
         }
     }
 
-    payload_written += bufsize;
+    payload_written += process_len;
 
     if (payload_written == fw_header.payload_size)
     {
