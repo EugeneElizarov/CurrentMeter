@@ -1,6 +1,6 @@
 // File: boot_crc32.c
 #include "boot_crc32.h"
-#include "stm32f303xb.h"
+#include "stm32f3xx.h"
 
 uint32_t BOOT_CalcCRC32(uint32_t addr, uint32_t length)
 {
