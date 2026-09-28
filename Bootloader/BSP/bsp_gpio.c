@@ -4,35 +4,30 @@
 
 void BSP_GPIO_Init(void)
 {
-    /* Включаем тактирование порта B */
+    const uint32_t pin = BOOT_LED_PIN;
+    const uint32_t mode_mask = 3UL << (pin * 2U);
+    const uint32_t pin_mask = 1UL << pin;
+
     RCC->AHBENR |= BOOT_LED_RCC_EN;
 
-    /* Настраиваем PB14 как выход (Push-Pull) */
-    /* Очищаем биты MODER для пина 14 */
-    BOOT_LED_PORT->MODER &= ~(GPIO_MODER_MODER14);
-    /* Устанавливаем режим Output (01) */
-    BOOT_LED_PORT->MODER |= (1U << (BOOT_LED_PIN * 2));
+    BOOT_LED_PORT->MODER &= ~mode_mask;
+    BOOT_LED_PORT->MODER |= 1UL << (pin * 2U);
 
-    /* Скорость Low (для светодиода достаточно) */
-    BOOT_LED_PORT->OSPEEDR &= ~(GPIO_OSPEEDER_OSPEEDR14);
-    
-    /* Выключаем светодиод при старте (сбрасываем бит в ODR) */
-    BOOT_LED_PORT->ODR &= ~(1U << BOOT_LED_PIN);
+    BOOT_LED_PORT->OTYPER &= ~pin_mask;
+    BOOT_LED_PORT->OSPEEDR &= ~mode_mask;
+    BOOT_LED_PORT->PUPDR &= ~mode_mask;
+    BOOT_LED_PORT->ODR &= ~pin_mask;
 }
 
 void BSP_GPIO_ToggleLed(void)
 {
-    BOOT_LED_PORT->ODR ^= (1U << BOOT_LED_PIN);
+    BOOT_LED_PORT->ODR ^= 1UL << BOOT_LED_PIN;
 }
 
 void BSP_GPIO_SetLed(uint8_t state)
 {
-    if (state)
-    {
-        BOOT_LED_PORT->BSRR = (1U << BOOT_LED_PIN);
-    }
+    if (state != 0U)
+        BOOT_LED_PORT->BSRR = 1UL << BOOT_LED_PIN;
     else
-    {
-        BOOT_LED_PORT->BSRR = (1U << (BOOT_LED_PIN + 16U));
-    }
+        BOOT_LED_PORT->BSRR = 1UL << (BOOT_LED_PIN + 16U);
 }
