@@ -30,14 +30,14 @@ static bool vector_valid(uint32_t addr, uint32_t size)
     {
         uint32_t i;
         for (i = 2U; i < 16U; ++i)
-    {
-        const uint32_t v =
-            *(volatile uint32_t *)(uintptr_t)(addr + i * sizeof(uint32_t));
+        {
+            const uint32_t v =
+                *(volatile uint32_t *)(uintptr_t)(addr + i * sizeof(uint32_t));
 
-        if (v != 0U && ((v & 1U) == 0U ||
-                        v < addr ||
-                        v >= addr + size))
-            return false;
+            if (v != 0U && ((v & 1U) == 0U ||
+                            v < addr ||
+                            v >= addr + size))
+                return false;
         }
     }
 
@@ -54,23 +54,24 @@ static bool copy_image(uint32_t src, uint32_t dst, uint32_t size)
 
     {
         uint32_t a;
+
         for (a = dst; a < dst + BOOT_MAIN_APP_SIZE; a += BOOT_FLASH_PAGE_SIZE)
-    {
-        if (!BSP_FLASH_ErasePage(a))
         {
-            BSP_FLASH_Lock();
-            return false;
-        }
+            if (!BSP_FLASH_ErasePage(a))
+            {
+                BSP_FLASH_Lock();
+                return false;
+            }
         }
 
         for (a = 0U; a < size; a += 2U)
-    {
-        if (!BSP_FLASH_WriteHalfWord(
-                dst + a, *(volatile uint16_t *)(uintptr_t)(src + a)))
         {
-            BSP_FLASH_Lock();
-            return false;
-        }
+            if (!BSP_FLASH_WriteHalfWord(
+                    dst + a, *(volatile uint16_t *)(uintptr_t)(src + a)))
+            {
+                BSP_FLASH_Lock();
+                return false;
+            }
         }
     }
 
