@@ -6,6 +6,7 @@
 #include "bsp_settings.h"
 #include "boot_crc32.h"
 #include "bootloader_defs.h"
+#include "usb_fsdev.h"
 
 static bool vector_valid(uint32_t addr,uint32_t size)
 {
@@ -96,47 +97,10 @@ int main(void)
     BSP_USB_MSC_Task();
 }
 
+void USB_LP_CAN_RX0_IRQHandler(void);
+
 void USB_LP_CAN_RX0_IRQHandler(void)
 {
   USB_Device_IRQHandler();
 }
 
-void HardFault_Handler(void)
-{
-  while(1)
-  {
-  }
-}
-
-void MemManage_Handler(void)
-{
-  while(1)
-  {
-  }
-}
-
-void BusFault_Handler(void)
-{
-  while(1)
-  {
-  }
-}
-
-void UsageFault_Handler(void)
-{
-  while(1)
-  {
-  }
-}
-
-void SVC_Handler(void)
-{
-}
-
-void DebugMon_Handler(void)
-{
-}
-
-void PendSV_Handler(void)
-{
-}

@@ -9,6 +9,7 @@
 #include "bootloader_config.h"
 #include "stm32f3xx.h"
 #include <string.h>
+#include "tools.h"
 
 #define CBW_SIG 0x43425355UL
 #define CSW_SIG 0x53425355UL
@@ -105,9 +106,7 @@ static bool decrypt_block(const uint8_t *cipher, uint32_t dst)
 
   for(i = 0U; i < 16U; i += 2U)
   {
-    uint16_t halfword = plain[i + 1U];
-    halfword <<= 8;
-    halfword |= plain[i];
+    uint16_t halfword = U16FROMA8(plain, i);
 
     if (!BSP_FLASH_WriteHalfWord(dst + i, halfword)) 
       return false;

@@ -49,12 +49,12 @@
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
           <OutputDirectory>.\</OutputDirectory>
-          <OutputName></OutputName>
+          <OutputName>bootloader</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>0</CreateHexFile>
           <DebugInformation>1</DebugInformation>
-          <BrowseInformation>0</BrowseInformation>
+          <BrowseInformation>1</BrowseInformation>
           <ListingPath>.\</ListingPath>
           <HexFormatSelection>1</HexFormatSelection>
           <Merge32K>0</Merge32K>
@@ -339,7 +339,7 @@
               <MiscControls>-std=c11</MiscControls>
               <Define>STM32F303xC</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\CMSIS\Core\Include;..\..\CMSIS\Device\ST\STM32F3xx\Include;..\src;..\BSP;..\USB</IncludePath>
+              <IncludePath>..\..\CMSIS\Core\Include;..\..\CMSIS\Device\ST\STM32F3xx\Include;..\src;..\BSP;..\USB;..\;..\..\</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>

@@ -45,7 +45,9 @@ static const uint8_t Rcon[11] = {0x00, 0x01, 0x02, 0x04, 0x08, 0x10, 0x20, 0x40,
 
 static uint8_t xtime(uint8_t x)
 {
-  return (uint8_t)((x << 1) ^ (((x >> 7) & 1U) * 0x1BU));
+  uint8_t x_or = ((x & 0x80) != 0) ? 0x1B : 0;
+  x <<= 1;
+  return x ^ x_or;
 }
 
 static uint8_t mul9(uint8_t x)

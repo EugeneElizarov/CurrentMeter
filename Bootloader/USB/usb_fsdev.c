@@ -4,6 +4,7 @@
 #include "stm32f303_usb.h"
 #include "stm32f3xx.h"
 #include <string.h>
+#include "tools.h"
 
 #define EP0_RX_PMA 64U
 #define EP0_TX_PMA 128U
@@ -42,7 +43,9 @@ static void pma_write(uint16_t a, const uint8_t *p, uint16_t n)
   
   while(i + 1 < n)
   {
-    *d = (uint16_t)p[i] | ((uint16_t)p[i + 1] << 8);
+    *d = p[i + 1];
+    *d <<= 8;
+    *d |= p[i];
     d++;
     i += 2;
   }
@@ -84,7 +87,7 @@ static uint16_t rx_count_code(uint16_t n)
   
   b = (uint16_t)((n + 31U) / 32U);
   
-  return (uint16_t)(0x8000U | (b << 10));
+  return (uint16_t)(0x8000 | (b << 10));
 }
 
 static uint16_t rx_count(uint8_t ep)
@@ -334,9 +337,9 @@ static void setup_received(void)
   pma_read(EP0_RX_PMA,ctrl_buf, 8);
   setup.bmRequestType = ctrl_buf[0];
   setup.bRequest = ctrl_buf[1];
-  setup.wValue = (uint16_t)ctrl_buf[2]  | ((uint16_t)ctrl_buf[3] << 8);
-  setup.wIndex = (uint16_t)ctrl_buf[4]  | ((uint16_t)ctrl_buf[5] << 8);
-  setup.wLength = (uint16_t)ctrl_buf[6] | ((uint16_t)ctrl_buf[7] << 8);
+  setup.wValue = U16FROMA8(ctrl_buf, 2);// (uint16_t)ctrl_buf[2]  | ((uint16_t)ctrl_buf[3] << 8);
+  setup.wIndex = U16FROMA8(ctrl_buf, 4);// (uint16_t)ctrl_buf[4]  | ((uint16_t)ctrl_buf[5] << 8);
+  setup.wLength = U16FROMA8(ctrl_buf, 6);// (uint16_t)ctrl_buf[6] | ((uint16_t)ctrl_buf[7] << 8);
   toggle_reset(0, false);
   toggle_reset(0, true);
   if ((setup.bmRequestType & 0x60) == 0)

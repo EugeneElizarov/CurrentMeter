@@ -35,7 +35,7 @@ void BSP_LED_Control(BSP_LED_Mode_t mode)
   tick_counter = 0U;
   ticks_per_toggle = 0U;
 
-  switch(mode)
+  switch (mode)
   {
     case BSP_LED_FLASH_1S:
     {
@@ -64,7 +64,6 @@ void BSP_LED_Control(BSP_LED_Mode_t mode)
       break;
     }
     case BSP_LED_OFF:
-    default:
     {
       LED_PORT->BSRR = 1UL << (LED_PIN + 16U);
       led_state = 0U;
@@ -72,6 +71,8 @@ void BSP_LED_Control(BSP_LED_Mode_t mode)
     }
   }
 }
+
+void SysTick_Handler(void);
 
 void SysTick_Handler(void)
 {
