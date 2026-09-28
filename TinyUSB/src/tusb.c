@@ -511,6 +511,9 @@ void tu_print_mem(void const* buf, uint32_t count, uint8_t indent) {
   const uint8_t item_per_line = 16 / size;
 
   unsigned int i;
+  uint8_t s;
+  uint32_t fill_i;
+  int j;
   for (i = 0; i < count; i++) {
     unsigned int value = 0;
 
@@ -519,7 +522,7 @@ void tu_print_mem(void const* buf, uint32_t count, uint8_t indent) {
       if (i != 0) {
         dump_str_line(buf8 - 16, 16);
       }
-      for (uint8_t s = 0; s < indent; s++) {
+      for (s = 0; s < indent; s++) {
         tu_printf(" ");
       }
       // print offset or absolute address
@@ -537,10 +540,9 @@ void tu_print_mem(void const* buf, uint32_t count, uint8_t indent) {
   const uint32_t remain = count % 16;
   uint8_t nback = (uint8_t) (remain ? remain : 16);
   if (remain > 0) {
-    for (uint32_t i = 0; i < 16 - remain; i++) {
+    for (fill_i = 0; fill_i < 16 - remain; fill_i++) {
       tu_printf(" ");
-      int j;
-  for (j = 0; j < 2 * size; j++) {
+      for (j = 0; j < 2 * size; j++) {
         tu_printf(" ");
       }
     }
