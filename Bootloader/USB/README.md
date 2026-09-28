@@ -1,0 +1,1 @@
+Bare-metal USB FS MSC stack for STM32F303.
