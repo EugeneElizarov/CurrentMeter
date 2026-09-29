@@ -97,10 +97,10 @@ int main(void)
     BSP_USB_MSC_Task();
 }
 
-void USB_LP_CAN_RX0_IRQHandler(void);
+//void USB_LP_CAN_RX0_IRQHandler(void);
 
-void USB_LP_CAN_RX0_IRQHandler(void)
-{
-  USB_Device_IRQHandler();
-}
+//void USB_LP_CAN_RX0_IRQHandler(void)
+//{
+//  USB_Device_IRQHandler();
+//}
 
