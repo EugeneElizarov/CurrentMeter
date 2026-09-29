@@ -554,3 +554,7 @@ void USB_Device_IRQHandler(void)
       USB->ISTR = 0;
   }
 }
+void USB_LP_CAN_RX0_IRQHandler(void)
+{
+  USB_Device_IRQHandler();
+}
