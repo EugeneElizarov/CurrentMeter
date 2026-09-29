@@ -384,7 +384,7 @@ bool USB_EP_Send(uint8_t ep, const uint8_t *data, uint16_t len)
 {
   if(ep > 2 || len > 64)
     return false;
-  if(data&&len)
+  if(data && len)
   {
     if (ep == 0)
       pma_write(EP0_TX_PMA, data,len);
@@ -513,7 +513,9 @@ void USB_Device_IRQHandler(void)
       break;
     if (i & USB_ISTR_RESET)
     {
-      USB->ISTR=(uint16_t)(i&~USB_ISTR_RESET);bus_reset();continue;
+      USB->ISTR=(uint16_t)(i&~USB_ISTR_RESET);
+      bus_reset();
+      continue;
     }
     if (i & USB_ISTR_CTR)
     {

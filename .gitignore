@@ -9,3 +9,5 @@
 *.uvguix*
 *.uvoptx
 JLink*
+*.scvd
+*.iex
